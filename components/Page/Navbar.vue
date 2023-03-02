@@ -13,18 +13,21 @@ const app = useAppConfig() as AppConfigInput
 const menus = computed((): IMenuItem[] => [
   {
     type: 'link',
-    text: t('pages.getting-started.nav'),
-    route: { name: 'getting-started' },
+    text: t('pages.ringrobotx.nav'),
+    route: { name: 'ringrobotx' },
   },
-  { type: 'link', text: t('pages.blank.nav'), route: { name: 'blank' } },
-  { type: 'link', text: t('pages.test.nav'), route: { name: 'test' } },
-  { type: 'link', text: t('pages.post.nav'), route: { name: 'post' } },
-  { type: 'link', text: t('pages.setting.nav'), route: { name: 'setting' } },
   {
-    type: 'button',
-    text: t('pages.dashboard.nav'),
-    route: { name: 'dashboard' },
+    type: 'link',
+    text: t('pages.wing.nav'),
+    route: { name: 'wing' },
   },
+  {
+    type: 'link',
+    text: t('pages.tergamer.nav'),
+    route: { name: 'tergamer' },
+  },
+  { type: 'link', text: t('pages.post.nav'), route: { name: 'post' } },
+  { type: 'link', text: t('pages.about.nav'), route: { name: 'about' } },
 ])
 </script>
 
@@ -32,31 +35,31 @@ const menus = computed((): IMenuItem[] => [
   <BuilderNavbar>
     <template #banner>
       <div
-        class="text-white text-xs text-center py-1 px-4 lg:px-8 bg-primary-500 capitalize"
+        class="bg-[#4f7ce1] text-white text-xs text-center py-1 px-4 capitalize lg:px-8"
       >
         <span class="mr-1">
-          {{ $t('banners.welcome', { app_name: app.name }) }}
+          {{ $t('banners.welcome') }}
           <Anchor
-            class="underline font-bold"
+            class="font-bold ml-10 underline"
             :text="$t('others.learn_more')"
-            href="https://github.com/viandwi24/nuxt3-awesome-starter"
+            href="https://afdian.net/item/c851c92ab39011ed998952540025c377"
           />
         </span>
       </div>
     </template>
     <template #menu>
-      <div class="relative hidden lg:flex items-center ml-auto">
+      <div class="ml-auto relative hidden items-center lg:flex">
         <nav
-          class="text-sm leading-6 font-semibold text-gray-600 dark:text-gray-300"
+          class="font-semibold text-sm text-gray-600 leading-6 dark:text-gray-300"
           role="navigation"
         >
-          <ul class="flex items-center space-x-8">
+          <ul class="flex space-x-8 items-center">
             <li v-for="(item, i) in menus" :key="i">
               <Anchor
                 v-if="item.type === 'link'"
                 :to="item.route ? item.route : undefined"
                 :href="item.href ? item.href : undefined"
-                class="hover:no-underline hover:text-slate-900 hover:dark:text-white capitalize"
+                class="text-xl capitalize hover:text-slate-900 hover:no-underline hover:dark:text-white"
                 >{{ item.text }}</Anchor
               >
               <Button
@@ -70,26 +73,26 @@ const menus = computed((): IMenuItem[] => [
             </li>
           </ul>
         </nav>
-        <div
-          class="flex space-x-4 border-l ml-6 pl-6 border-gray-900/10 dark:border-gray-50/[0.2]"
+        <!-- <div
+          class="border-l flex space-x-4 border-gray-900/10 ml-6 pl-6 dark:border-gray-50/[0.2]"
         >
           <LanguageSwitcher />
           <ThemeSwitcher />
           <Anchor
-            class="hover:no-underline hover:text-slate-900 hover:dark:text-white text-lg flex self-center items-center"
+            class="flex text-lg self-center items-center hover:text-slate-900 hover:no-underline hover:dark:text-white"
             href="https://github.com/viandwi24/nuxt3-awesome-starter"
             title="Github"
           >
             <IconMdi:github-face />
           </Anchor>
-        </div>
+        </div> -->
       </div>
     </template>
     <template #options="{ toggleOptions }">
       <ActionSheet @on-close="toggleOptions(false)">
         <ActionSheetBody>
-          <ActionSheetHeader text="Menu" />
-          <nav class="leading-6 font-semibold text-gray-600 dark:text-gray-300">
+          <!-- <ActionSheetHeader text="Menu" /> -->
+          <nav class="font-semibold text-gray-600 leading-6 dark:text-gray-300">
             <ul class="flex flex-col">
               <li
                 v-for="(item, i) in menus"
@@ -104,32 +107,32 @@ const menus = computed((): IMenuItem[] => [
                   v-if="item.type === 'link'"
                   :to="item.route ? item.route : undefined"
                   :href="item.href ? item.href : undefined"
-                  class="flex-1 hover:no-underline capitalize"
+                  class="flex-1 capitalize hover:no-underline"
                   >{{ item.text }}</Anchor
                 >
                 <Button
                   v-else-if="item.type === 'button'"
                   :text="item.text"
                   size="xs"
-                  class="flex-1 font-extrabold capitalize"
+                  class="font-extrabold flex-1 capitalize"
                   :to="item.route ? item.route : undefined"
                   :href="item.href ? item.href : undefined"
                 />
               </li>
             </ul>
           </nav>
-          <div class="mt-6 text-sm font-bold capitalize">
+          <!-- <div class="font-bold mt-6 text-sm capitalize">
             {{ $t('components.theme_switcher.change_theme') }}
           </div>
           <div class="mt-2">
             <ThemeSwitcher type="select-box" />
           </div>
-          <div class="mt-6 text-sm font-bold capitalize">
+          <div class="font-bold mt-6 text-sm capitalize">
             {{ $t('components.language_switcher.change_language') }}
           </div>
           <div class="mt-2">
             <LanguageSwitcher type="select-box" />
-          </div>
+          </div> -->
         </ActionSheetBody>
         <Button
           type="secondary"

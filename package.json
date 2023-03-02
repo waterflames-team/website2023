@@ -1,12 +1,12 @@
 {
-  "name": "nuxt3-awesome-starter",
+  "name": "water-flames",
   "version": "0.1.0",
-  "description": "a Nuxt 3 starter template or boilerplate with a lot of useful features. Nuxt3 + Tailwindcss 3",
+  "description": "水焰官网",
   "repository": {
     "type": "git",
-    "url": "git://github.com/viandwi24/nuxt3-awesome-starter"
+    "url": "https://github.com/orangelckc/water-flames"
   },
-  "author": "viandwi24",
+  "author": "KC",
   "license": "MIT",
   "scripts": {
     "build": "nuxt build",

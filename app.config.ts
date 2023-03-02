@@ -1,7 +1,7 @@
 export default defineAppConfig({
-  name: 'Nuxt 3 Awesome Starter',
+  name: 'Water Flames',
   author: {
-    name: 'viandwi24',
-    link: 'https://github.com/viandwi24',
+    name: 'KC',
+    link: 'https://github.com/orangelckc/water-flames',
   },
 })

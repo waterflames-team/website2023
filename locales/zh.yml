@@ -6,7 +6,7 @@ components:
     change_theme: 切换主题
 pages:
   index:
-    title: nuxt 3[]awesome[]starter
+    title: "hi[]water[]flames"
   404:
     title: 找不到该页面
   blank:
@@ -14,10 +14,6 @@ pages:
     title: 空白页
     description: 这是一个空白页
     just_blank_page_with_title: 只是带有标题的空白页
-  post:
-    nav: 文章
-    title: 文章
-    description: 这是一个文章页面
   test:
     nav: 测试
     title: 测试
@@ -63,10 +59,32 @@ pages:
     index:
       nav: 主页
       title: 主页
+  ringrobotx:
+    nav: RingRobotX 项目群
+    title: RingRobotX 项目群
+    description: RingRobotX 项目群描述
+  wing:
+    nav: Wing 项目群
+    title: Wing 项目群
+    description: Wing 项目群描述
+    wing_title: wing带进去的参数
+  tergamer:
+    nav: TerGamer
+    title: TerGamer
+    description: TerGamer
+    just_blank_page_with_title: 只是带有标题的空白页
+  post:
+    nav: 博客
+    title: 博客
+    description: 博客
+  about:
+    nav: 关于
+    title: 关于
+    description: 关于
 banners:
-  welcome: 你好, 欢迎来到 %{app_name}!
+  welcome: 为这个官网加速
 others:
-  learn_more: 了解更多
+  learn_more: ">点击前往"
   copy: 复制
   enabled: 启用
   disabled: 禁用

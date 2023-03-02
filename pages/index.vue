@@ -35,35 +35,35 @@ const tooltip = ref(false)
 const cancelTooltip = () => {
   tooltip.value = false
   const tt = document.querySelector('.tooltiptext')
-  if (tt) tt.innerHTML = `Copy to clipboard`
+  if (tt) tt.innerHTML = `一键克隆仓库`
 }
 const copyBash = () => {
-  const bash = 'git clone https://github.com/viandwi24/nuxt3-awesome-starter'
+  const bash = 'git clone https://github.com/orangelckc/water-flames'
   navigator.clipboard.writeText(bash)
   tooltip.value = true
   const tt = document.querySelector('.tooltiptext')
-  if (tt) tt.innerHTML = `Copied!!!`
+  if (tt) tt.innerHTML = `已复制`
 }
 </script>
 
 <template>
-  <PageWrapper class="flex-1 flex">
-    <div class="background-overlay">
+  <PageWrapper class="flex flex-1">
+    <!-- <div class="background-overlay">
       <div
-        class="absolute top-0 left-0 transform translate-x-64 translate-y-4 h-14 w-14 rounded-full bg-gray-900 dark:bg-white"
+        class="rounded-full bg-gray-900 h-14 transform top-0 left-0 w-14 translate-x-64 translate-y-4 absolute dark:bg-white"
       ></div>
       <div
-        class="absolute hidden md:block top-0 left-0 transform translate-x-18 translate-y-20 h-28 w-28 rounded-full bg-blue-600 linear-wipe"
+        class="rounded-full bg-blue-600 h-28 transform top-0 left-0 w-28 translate-x-18 translate-y-20 absolute hidden linear-wipe md:block"
       ></div>
       <div
-        class="absolute hidden md:block bottom-0 right-0 transform -translate-x-4 -translate-y-40 h-16 w-16 rounded bg-purple-600 linear-wipe"
+        class="rounded bg-purple-600 h-16 transform right-0 bottom-0 w-16 -translate-x-4 -translate-y-40 absolute hidden linear-wipe md:block"
       ></div>
-      <div class="absolute bottom-0 right-0 triangle-shape"></div>
-    </div>
-    <PageBody class="flex-1 flex">
-      <PageSection class="flex-1 flex items-center">
-        <div class="flex-1 md:w-5/8 flex flex-col z-10">
-          <h1 class="text-center md:text-left mt-4">
+      <div class="right-0 bottom-0 absolute triangle-shape"></div>
+    </div> -->
+    <PageBody class="flex flex-1">
+      <PageSection class="flex flex-1 items-center">
+        <div class="flex flex-col flex-1 z-10 md:w-5/8">
+          <h1 class="mt-4 text-center md:text-left">
             <span
               v-for="(item, i) in leadingsText"
               :key="i"
@@ -72,45 +72,48 @@ const copyBash = () => {
               }; --end-color: ${item.endColor}; --animation-name: anim-fg-${
                 i + 1
               }`"
-              class="animated-text-bg drop-shadow-xl text-5xl xl:text-8xl 2xl:text-9xl block font-black uppercase"
+              class="font-black text-5xl animated-text-bg drop-shadow-xl block uppercase xl:text-8xl 2xl:text-9xl"
             >
               <span class="animated-text-fg">{{ item.text }}</span>
             </span>
           </h1>
           <div
-            class="flex space-x-4 ml-4 mt-10 justify-center md:justify-start"
+            class="flex space-x-4 mt-10 ml-4 justify-center md:justify-start"
           >
             <Button
               size="lg"
-              text="Nuxt 3"
+              text="Github"
+              type="opposite"
               class="font-extrabold"
-              href="https://v3.nuxtjs.org"
+              href="https://github.com/orangelckc/water-flames"
             />
             <Button
               size="lg"
-              text="Github"
+              text="Gitee"
               type="secondary"
               class="font-extrabold"
-              href="https://github.com/viandwi24/nuxt3-awesome-starter"
+              href="https://v3.nuxtjs.org"
             />
           </div>
         </div>
-        <div class="hidden md:flex md:w-3/8 justify-center items-end relative">
-          <Gem class="absolute -top-64 -right-0" />
-          <div class="ml-4 w-100 z-10 h-auto shadow">
+        <div class="hidden justify-center items-end relative md:flex md:w-3/8">
+          <!-- <Gem class="-top-64 -right-0 absolute" /> -->
+          <div
+            class="h-auto border-white-300 border-2 rounded-5px shadow ml-4 w-100 z-10"
+          >
             <div
-              class="win-header bg-gray-200 dark:bg-slate-800 flex flex space-x-4 px-3 py-2 rounded-t-lg relative border-b-2 border-gray-300/75 dark:border-slate-700/75"
+              class="rounded-t-lg flex space-x-4 bg-gray-200 border-b-2 border-gray-300/75 py-2 px-3 win-header relative dark:bg-slate-800 dark:border-slate-700/75"
             >
-              <div class="win-controls flex space-x-1 items-center">
-                <div class="w-3 h-3 bg-red-500 rounded-full" />
-                <div class="w-3 h-3 bg-green-500 rounded-full" />
-                <div class="w-3 h-3 bg-yellow-500 rounded-full" />
+              <div class="flex space-x-1 win-controls items-center">
+                <div class="rounded-full bg-red-500 h-3 w-3" />
+                <div class="rounded-full bg-green-500 h-3 w-3" />
+                <div class="rounded-full bg-yellow-500 h-3 w-3" />
               </div>
-              <div class="flex-1 font-bold text-center pr-12 text-sm">BASH</div>
-              <div class="text-sm flex justify-center items-center">
+              <div class="font-bold flex-1 text-center text-sm pr-12">BASH</div>
+              <div class="flex text-sm justify-center items-center">
                 <div class="tooltip">
                   <button
-                    class="text-gray-100 flex justify-center items-center"
+                    class="flex text-gray-100 justify-center items-center"
                     @click="copyBash"
                     @mouseout="cancelTooltip"
                   >
@@ -121,7 +124,7 @@ const copyBash = () => {
               </div>
             </div>
             <div
-              class="win-body rounded-b-lg bg-gray-200/90 dark:bg-slate-800/90 px-3 py-2 font-mono backdrop-filter backdrop-blur-lg"
+              class="rounded-b-lg font-mono bg-gray-200/90 py-2 px-3 win-body backdrop-filter backdrop-blur-lg dark:bg-slate-800/90"
             >
               <div>
                 $ git clone https://github.com/viandwi24/nuxt3-awesome-starter

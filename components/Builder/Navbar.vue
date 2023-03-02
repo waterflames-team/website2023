@@ -51,18 +51,18 @@ const toggleOptions = (show?: boolean) => {
 <template>
   <div
     ref="navbar"
-    class="backdrop-filter backdrop-blur-md top-0 z-40 w-full flex-none transition-colors duration-300 lg:z-50 border-b border-gray-900/10 dark:border-gray-50/[0.2] bg-white/[0.5] dark:bg-slate-900/[0.5]"
+    class="border-b flex-none bg-white/[0.5] border-gray-900/10 w-full transition-colors top-0 z-40 duration-300 backdrop-filter backdrop-blur-md lg:z-50 dark:bg-slate-900/[0.5] dark:border-gray-50/[0.2]"
   >
     <div id="navbar-banner" class="banner">
       <slot name="banner" />
     </div>
-    <div class="max-w-8xl w-full mx-auto">
-      <div class="py-3 lg:px-8 mx-4 lg:mx-0">
-        <div class="relative flex items-center">
+    <div class="mx-auto w-full max-w-8xl">
+      <div class="mx-4 py-3 lg:mx-0 lg:px-8">
+        <div class="flex relative items-center">
           <!-- drawer:toggle -->
           <div
             v-if="$slots['drawer']"
-            class="lg:hidden flex items-center self-center justify-center mr-2"
+            class="flex mr-2 items-center self-center justify-center lg:hidden"
           >
             <button
               class="flex items-center focus:outline-none"
@@ -70,7 +70,7 @@ const toggleOptions = (show?: boolean) => {
               @click="toggleDrawer()"
             >
               <span
-                class="flex items-center text-gray-600 dark:text-gray-300 text-lg"
+                class="flex text-lg text-gray-600 items-center dark:text-gray-300"
                 aria-hidden="true"
               >
                 <IconUil:bars v-if="!showDrawer" />
@@ -82,15 +82,17 @@ const toggleOptions = (show?: boolean) => {
           <slot name="title">
             <NuxtLink
               tag="a"
-              class="mr-3 flex-none overflow-hidden md:w-auto text-md font-bold text-gray-900 dark:text-gray-200"
+              class="flex-none font-bold mr-3 text-md text-gray-900 w-50 overflow-hidden dark:text-gray-200"
               :to="{ name: 'index' }"
             >
               <span class="sr-only">home</span>
               <span class="flex items-center">
-                <IconSimpleIcons:nuxtdotjs
-                  class="inline-block mr-2 text-lg text-primary-500"
+                <img
+                  class="h-10 mr-4 inline-block"
+                  src="~assets/images/logo.svg"
+                  alt="LOGO"
                 />
-                {{ app.name }}
+                <span class="text-xl">{{ app.name }}</span>
               </span>
             </NuxtLink>
           </slot>
@@ -99,7 +101,7 @@ const toggleOptions = (show?: boolean) => {
           <!-- options:toggle -->
           <div
             v-if="$slots['options']"
-            class="flex-1 flex justify-end lg:hidden"
+            class="flex flex-1 justify-end lg:hidden"
           >
             <button
               class="flex items-center focus:outline-none"
@@ -107,7 +109,7 @@ const toggleOptions = (show?: boolean) => {
               @click="toggleOptions()"
             >
               <span
-                class="flex items-center text-gray-600 dark:text-gray-300 text-sm"
+                class="flex text-sm text-gray-600 items-center dark:text-gray-300"
                 aria-hidden="true"
               >
                 <icon-fa-solid:ellipsis-v />
@@ -123,9 +125,9 @@ const toggleOptions = (show?: boolean) => {
         <Transition name="slide-fade-from-up" mode="out-in">
           <div
             v-if="showDrawer && $slots['drawer']"
-            class="fixed lg:hidden bg-gray-100 dark:bg-slate-800 pt-12 top-0 left-0 w-screen h-screen z-30 flex flex-col"
+            class="flex flex-col h-screen bg-gray-100 w-screen pt-12 top-0 left-0 z-30 fixed lg:hidden dark:bg-slate-800"
           >
-            <div class="flex-1 flex flex-col relative overflow-y-auto">
+            <div class="flex flex-col flex-1 relative overflow-y-auto">
               <slot name="drawer" :toggle-drawer="toggleDrawer" />
             </div>
           </div>
