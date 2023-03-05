@@ -62,25 +62,23 @@ pages:
   ringrobotx:
     nav: RingRobotX 项目群
     title: RingRobotX 项目群
-    description: RingRobotX 项目群描述
+    description: "RingRobotX[]一个采用单轮对话设计的[]中文模块化语音机器人框架"
   wing:
     nav: Wing 项目群
     title: Wing 项目群
-    description: Wing 项目群描述
-    wing_title: wing带进去的参数
+    description: "Wing，[]让你用简单的配置，[]制作属于自己的博客。[][停止维护]"
   tergamer:
     nav: TerGamer
     title: TerGamer
-    description: TerGamer
-    just_blank_page_with_title: 只是带有标题的空白页
+    description: "TerGamer，[]一个命令行游戏框架。[]它还在开发，[]如果你想的话，可以和我们一起。"
   post:
     nav: 博客
     title: 博客
     description: 博客
   about:
-    nav: 关于
-    title: 关于
-    description: 关于
+    nav: 关于我们
+    title: 关于我们
+    description: "WaterFlames[]关于我们"
 banners:
   welcome: 为这个官网加速
 others:

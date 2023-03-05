@@ -26,8 +26,8 @@ const menus = computed((): IMenuItem[] => [
     text: t('pages.tergamer.nav'),
     route: { name: 'tergamer' },
   },
-  { type: 'link', text: t('pages.post.nav'), route: { name: 'post' } },
   { type: 'link', text: t('pages.about.nav'), route: { name: 'about' } },
+  { type: 'link', text: t('pages.post.nav'), route: { name: 'post' } },
 ])
 </script>
 

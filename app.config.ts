@@ -1,5 +1,5 @@
 export default defineAppConfig({
-  name: 'Water Flames',
+  name: 'WaterFlames',
   author: {
     name: 'KC',
     link: 'https://github.com/orangelckc/water-flames',
