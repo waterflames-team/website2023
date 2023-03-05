@@ -48,18 +48,6 @@ const copyBash = () => {
 
 <template>
   <PageWrapper class="flex flex-1">
-    <!-- <div class="background-overlay">
-      <div
-        class="rounded-full bg-gray-900 h-14 transform top-0 left-0 w-14 translate-x-64 translate-y-4 absolute dark:bg-white"
-      ></div>
-      <div
-        class="rounded-full bg-blue-600 h-28 transform top-0 left-0 w-28 translate-x-18 translate-y-20 absolute hidden linear-wipe md:block"
-      ></div>
-      <div
-        class="rounded bg-purple-600 h-16 transform right-0 bottom-0 w-16 -translate-x-4 -translate-y-40 absolute hidden linear-wipe md:block"
-      ></div>
-      <div class="right-0 bottom-0 absolute triangle-shape"></div>
-    </div> -->
     <PageBody class="flex flex-1">
       <PageSection class="flex flex-1 items-center">
         <div class="flex flex-col flex-1 z-10 md:w-5/8">
@@ -97,7 +85,6 @@ const copyBash = () => {
           </div>
         </div>
         <div class="hidden justify-center items-end relative md:flex md:w-3/8">
-          <!-- <Gem class="-top-64 -right-0 absolute" /> -->
           <div
             class="h-auto border-white-300 border-2 rounded-5px shadow ml-4 w-100 z-10"
           >
@@ -126,9 +113,7 @@ const copyBash = () => {
             <div
               class="rounded-b-lg font-mono bg-gray-200/90 py-2 px-3 win-body backdrop-filter backdrop-blur-lg dark:bg-slate-800/90"
             >
-              <div>
-                $ git clone https://github.com/viandwi24/nuxt3-awesome-starter
-              </div>
+              <div>$ git clone https://github.com/orangelckc/water-flames</div>
             </div>
           </div>
         </div>
