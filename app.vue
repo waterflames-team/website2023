@@ -27,17 +27,7 @@ useHead({
     <Body
       class="bg-white transition-colors text-gray-800 overflow-y-scroll antialiased dark:bg-gray-900 dark:text-gray-200"
     >
-      <NuxtLayout
-        class="relative"
-        style="
-          background: linear-gradient(
-            to bottom right,
-            #d84210,
-            #151b43,
-            #1f67e4
-          );
-        "
-      >
+      <NuxtLayout class="relative" style="background: #151b43">
         <NuxtLoadingIndicator :height="5" :duration="30000" :throttle="400" />
         <NuxtPage />
       </NuxtLayout>

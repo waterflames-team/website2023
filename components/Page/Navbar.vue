@@ -111,7 +111,7 @@ const menus = computed((): IMenuItem[] => [
         <Button
           type="secondary"
           title="Github"
-          href="https://github.com/orangelckc/water-flames"
+          href="https://github.com/waterflames-team/website"
         >
           <IconMdi:github-face />
           <span class="ml-1">Github</span>

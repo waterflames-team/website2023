@@ -15,6 +15,22 @@ useHead(() => ({
     },
   ],
 }))
+const tooltip = ref(false)
+
+// const
+const cancelTooltip = () => {
+  tooltip.value = false
+  const tt = document.querySelector('.tooltiptext')
+  if (tt) tt.innerHTML = `一键复制`
+}
+const copyBash = () => {
+  const bash =
+    'wget -O install.sh https://gitee.com/waterflames-team/ring-robot-x/raw/master/install.sh && sudo bash install.sh'
+  navigator.clipboard.writeText(bash)
+  tooltip.value = true
+  const tt = document.querySelector('.tooltiptext')
+  if (tt) tt.innerHTML = `已复制`
+}
 
 const arr = [
   {
@@ -122,7 +138,7 @@ const arr = [
       </PageSection>
       <PageSection>
         <div
-          class="rounded-xl flex flex-col text-white w-full p-20 text-6xl gap-6"
+          class="rounded-xl flex w-full py-20 justify-around"
           style="
             background-image: url('./images/ringrobotx-footer.png');
             background-size: cover;
@@ -130,13 +146,51 @@ const arr = [
             background-repeat: no-repeat;
           "
         >
-          <p>RingRobotX，</p>
-          <p>马上开耍。</p>
-          <p class="text-xl">
-            wget -O install.sh
-            https://gitee.com/waterflames-team/ring-robot-x/raw/master/install.sh
-            && sudo bash install.sh
-          </p>
+          <div class="flex flex-col text-white text-6xl gap-6">
+            <p>RingRobotX，</p>
+            <p>马上开耍。</p>
+          </div>
+          <div
+            class="hidden justify-center items-end relative md:flex md:w-3/8"
+          >
+            <div
+              class="h-auto border-white-300 border-2 rounded-5px shadow ml-4 w-100 z-10"
+            >
+              <div
+                class="rounded-t-lg flex space-x-4 bg-gray-200 border-b-2 border-gray-300/75 py-2 px-3 win-header relative dark:bg-slate-800 dark:border-slate-700/75"
+              >
+                <div class="flex space-x-1 win-controls items-center">
+                  <div class="rounded-full bg-red-500 h-3 w-3" />
+                  <div class="rounded-full bg-green-500 h-3 w-3" />
+                  <div class="rounded-full bg-yellow-500 h-3 w-3" />
+                </div>
+                <div class="font-bold flex-1 text-center text-sm pr-12">
+                  BASH
+                </div>
+                <div class="flex text-sm justify-center items-center">
+                  <div class="tooltip">
+                    <button
+                      class="flex text-gray-100 justify-center items-center"
+                      @click="copyBash"
+                      @mouseout="cancelTooltip"
+                    >
+                      <span class="tooltiptext">一键复制</span>
+                      <icon-material-symbols:content-copy-outline />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="rounded-b-lg font-mono bg-gray-200/90 text-sm py-2 px-3 win-body backdrop-filter backdrop-blur-lg dark:bg-slate-800/90"
+              >
+                <div>
+                  $ wget -O install.sh
+                  https://gitee.com/waterflames-team/ring-robot-x/raw/master/install.sh
+                  && sudo bash install.sh
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </PageSection>
     </PageBody>

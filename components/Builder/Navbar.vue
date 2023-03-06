@@ -92,7 +92,6 @@ const toggleOptions = (show?: boolean) => {
                   src="~assets/images/logo.svg"
                   alt="LOGO"
                 />
-                <span class="text-xl">{{ app.name }}</span>
               </span>
             </NuxtLink>
           </slot>

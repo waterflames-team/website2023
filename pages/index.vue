@@ -9,60 +9,30 @@ definePageMeta({
 
 // vars
 const titlesText = computed<string[]>(() => t('pages.index.title').split('[]'))
-const leadingsText = computed(() => [
-  {
-    text: titlesText.value[0],
-    startColor: '#007CF0',
-    endColor: '#00DFD8',
-    delay: 0,
-  },
-  {
-    text: titlesText.value[1],
-    startColor: '#7928CA',
-    endColor: '#FF0080',
-    delay: 2,
-  },
-  {
-    text: titlesText.value[2],
-    startColor: '#FF4D4D',
-    endColor: '#F9CB28',
-    delay: 4,
-  },
-])
-const tooltip = ref(false)
-
-// const
-const cancelTooltip = () => {
-  tooltip.value = false
-  const tt = document.querySelector('.tooltiptext')
-  if (tt) tt.innerHTML = `一键克隆仓库`
-}
-const copyBash = () => {
-  const bash = 'git clone https://github.com/orangelckc/water-flames'
-  navigator.clipboard.writeText(bash)
-  tooltip.value = true
-  const tt = document.querySelector('.tooltiptext')
-  if (tt) tt.innerHTML = `已复制`
-}
 </script>
 
 <template>
   <PageWrapper class="flex flex-1">
-    <PageBody class="flex flex-1">
-      <PageSection class="flex flex-1 items-center">
-        <div class="flex flex-col flex-1 z-10 md:w-5/8">
-          <h1 class="mt-4 text-center md:text-left">
+    <PageBody class="flex flex-1 items-center">
+      <PageSection
+        class="flex rounded-2xl flex-1 py-40 items-center"
+        :style="{
+          backgroundImage: `url('/images/index-banner.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }"
+      >
+        <div class="flex flex-col flex-1 z-10 md:pl-20 md:w-5/8">
+          <h1
+            class="flex flex-col mt-4 text-white text-center gap-6 md:text-left"
+          >
             <span
-              v-for="(item, i) in leadingsText"
+              v-for="(item, i) in titlesText"
               :key="i"
-              :style="`--content: '${item.text}'; --start-color: ${
-                item.startColor
-              }; --end-color: ${item.endColor}; --animation-name: anim-fg-${
-                i + 1
-              }`"
-              class="font-black text-5xl animated-text-bg drop-shadow-xl block uppercase xl:text-8xl 2xl:text-9xl"
+              class="font-black text-3xl drop-shadow-xl block md:text-4xl xl:text-5xl 2xl:text-7xl"
             >
-              <span class="animated-text-fg">{{ item.text }}</span>
+              <span>{{ item }}</span>
             </span>
           </h1>
           <div
@@ -82,39 +52,6 @@ const copyBash = () => {
               class="font-extrabold"
               href="https://v3.nuxtjs.org"
             />
-          </div>
-        </div>
-        <div class="hidden justify-center items-end relative md:flex md:w-3/8">
-          <div
-            class="h-auto border-white-300 border-2 rounded-5px shadow ml-4 w-100 z-10"
-          >
-            <div
-              class="rounded-t-lg flex space-x-4 bg-gray-200 border-b-2 border-gray-300/75 py-2 px-3 win-header relative dark:bg-slate-800 dark:border-slate-700/75"
-            >
-              <div class="flex space-x-1 win-controls items-center">
-                <div class="rounded-full bg-red-500 h-3 w-3" />
-                <div class="rounded-full bg-green-500 h-3 w-3" />
-                <div class="rounded-full bg-yellow-500 h-3 w-3" />
-              </div>
-              <div class="font-bold flex-1 text-center text-sm pr-12">BASH</div>
-              <div class="flex text-sm justify-center items-center">
-                <div class="tooltip">
-                  <button
-                    class="flex text-gray-100 justify-center items-center"
-                    @click="copyBash"
-                    @mouseout="cancelTooltip"
-                  >
-                    <span class="tooltiptext">Copy to clipboard</span>
-                    <icon-material-symbols:content-copy-outline />
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              class="rounded-b-lg font-mono bg-gray-200/90 py-2 px-3 win-body backdrop-filter backdrop-blur-lg dark:bg-slate-800/90"
-            >
-              <div>$ git clone https://github.com/orangelckc/water-flames</div>
-            </div>
           </div>
         </div>
       </PageSection>

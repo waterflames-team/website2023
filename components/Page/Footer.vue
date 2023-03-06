@@ -10,11 +10,9 @@ const app = useAppConfig() as AppConfigInput
       class="flex mx-auto space-x-20 flex-1 w-full max-w-8xl px-4 justify-center lg:px-8"
     >
       <div class="text-center py-4">
-        <div class="mb-1">
-          {{ app.name }}
-        </div>
         <div class="text-xs text-gray-600 dark:text-gray-400">
-          {{ app.name }} ©2019-2023. All rights reserved. Made with
+          {{ app.name }} ©2019-2023. All rights reserved. <br />Made by
+          <a href="" target="_blank">waterflames/webside</a> with
           <span class="text-red-500">❤</span>
         </div>
       </div>

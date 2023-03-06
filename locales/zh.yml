@@ -6,7 +6,7 @@ components:
     change_theme: 切换主题
 pages:
   index:
-    title: "hi[]water[]flames"
+    title: "WaterFlames，[]一个开放开源的团队，[]致力于用技术便利生活"
   404:
     title: 找不到该页面
   ringrobotx:
