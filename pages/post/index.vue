@@ -28,30 +28,34 @@ useHead(() => ({
       <ContentList v-slot="{ list }" path="/post">
         <PageSection v-for="article in list" :key="article._path">
           <div
-            class="block hover:no-underline p-6 flex space-x-6 rounded border border-gray-900/10 dark:border-gray-50/[0.2]"
+            class="border rounded flex flex-col border-gray-50/[0.2] py-6 px-4 gap-2 block md:flex-row md:gap-6 hover:no-underline"
           >
-            <div class="mt-1 text-slate-600 dark:text-gray-400 text-right">
+            <div
+              class="flex flex-row text-gray-500 gap-3 justify-between md:flex-col md:justify-start"
+            >
               <div>{{ article.date }}</div>
               <Anchor
-                class="text-sm flex items-center justify-end space-x-1"
-                :href="`https://www.github.com/${article.author}`"
+                class="flex space-x-1 text-sm items-center justify-start"
+                :href="article.link"
               >
                 <icon-mdi:github-face class="text-xs" />
                 <span>{{ article.author }}</span>
               </Anchor>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col flex-1">
               <div
-                class="text-xl font-semibold text-slate-800 dark:text-gray-50"
+                class="font-semibold text-xl mb-4 text-slate-800 dark:text-gray-50"
               >
-                {{ article.title }}
+                <Anchor :to="article._path">
+                  <span>{{ article.title }}</span>
+                </Anchor>
               </div>
-              <div class="text-slate-700 dark:text-gray-300 mb-1">
+              <div class="text-lg mb-1 text-slate-700 dark:text-gray-300">
                 {{ article.description }}
               </div>
               <div class="flex">
                 <Anchor
-                  class="text-sm flex space-x-1 items-center text-primary-500"
+                  class="flex space-x-1 text-sm text-primary-500 items-center"
                   :to="article._path"
                 >
                   <span>{{ $t('others.learn_more') }}</span>

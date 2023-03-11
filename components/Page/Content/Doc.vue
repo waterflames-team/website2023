@@ -1,10 +1,8 @@
 <template>
   <ContentDoc>
     <template #default="{ doc }">
-      <PageHeader>
-        <PageTitle :text="doc.title" />
-      </PageHeader>
-      <PageBody>
+      <PageBody class="text-base">
+        <p class="text-center text-4xl">{{ doc.title }}</p>
         <PageSection>
           <ContentRenderer :value="doc" />
         </PageSection>

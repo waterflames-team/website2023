@@ -32,7 +32,7 @@ pages:
 banners:
   welcome: 为这个官网加速
 others:
-  learn_more: ">点击前往"
+  learn_more: "点击前往"
   copy: 复制
   enabled: 启用
   disabled: 禁用
