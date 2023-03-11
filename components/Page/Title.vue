@@ -19,7 +19,7 @@ const title = computed(() => {
 
 <template>
   <div
-    class="font-bold flex-1 leading-relaxed text-3xl lg:leading-relaxed lg:text-4xl xl:leading-loose xl:text-6xl"
+    class="font-bold flex-1 leading-relaxed text-3xl lg:leading-relaxed lg:text-6xl xl:leading-loose"
   >
     <div
       class="flex flex-col h-200 px-10 gap-10 justify-center items-center md:flex-row md:flex-1"
@@ -30,7 +30,7 @@ const title = computed(() => {
         backgroundRepeat: 'no-repeat',
       }"
     >
-      <div>
+      <div class="ali">
         <p v-for="item of title" :key="item">{{ item }}</p>
       </div>
       <slot class="bg-red" />

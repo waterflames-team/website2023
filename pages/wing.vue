@@ -73,7 +73,7 @@ const arr = ref([
             background-repeat: no-repeat;
           "
         >
-          <div class="flex flex-col flex-1 text-3xl gap-6 lg:text-6xl">
+          <div class="flex flex-col flex-1 text-3xl gap-6 ali lg:text-6xl">
             <p>如果你想的话</p>
             <p>你还可以去看看Wing</p>
           </div>

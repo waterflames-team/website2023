@@ -129,7 +129,7 @@ useHead(() => ({
           "
         >
           <div
-            class="flex flex-col flex-1 text-lg gap-2 md:text-4xl md:gap-4 xl:text-6xl"
+            class="flex flex-col flex-1 text-lg gap-2 ali md:text-4xl md:gap-4 xl:text-6xl"
           >
             <p>关于我们的联系方式？</p>
             <p>这里都可以看到。</p>

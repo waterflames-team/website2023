@@ -124,7 +124,7 @@ const arr = [
           "
         >
           <div class="flex flex-col gap-1 items-center">
-            <p class="text-4xl">特色功能</p>
+            <p class="text-4xl ali">特色功能</p>
             <p class="text-lg">至目前开发的版本，我们已有以下特色功能</p>
           </div>
           <div class="flex flex-wrap mt-6 gap-8 justify-around">
@@ -133,7 +133,7 @@ const arr = [
               :key="item.title"
               class="bg-black rounded-xl flex flex-col bg-opacity-60 flex-1/2 w-full p-8 items-center justify-center xl:w-90"
             >
-              <p class="mb-2 text-2xl lg:text-3xl">{{ item.title }}</p>
+              <p class="mb-2 text-2xl ali lg:text-3xl">{{ item.title }}</p>
               <p class="text-base lg:text-lg">{{ item.content1 }}</p>
               <p class="text-base lg:text-lg">{{ item.content2 }}</p>
             </div>
@@ -150,7 +150,9 @@ const arr = [
             background-repeat: no-repeat;
           "
         >
-          <div class="flex flex-col flex-1 text-3xl gap-4 md:gap-6 lg:text-6xl">
+          <div
+            class="flex flex-col flex-1 text-3xl gap-4 ali md:gap-6 lg:text-6xl"
+          >
             <p>RingRobotX</p>
             <p>马上开耍</p>
           </div>

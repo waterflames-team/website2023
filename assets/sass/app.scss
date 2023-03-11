@@ -21,6 +21,9 @@
   background-color: theme('colors.slate.400');
 }
 html.dark {
+  .ali{
+    font-family:'alimama'
+  }
   ::-webkit-scrollbar-track {
     background: theme('colors.slate.800');
     border-left: 1px solid theme('colors.slate.700');
@@ -36,3 +39,13 @@ html.dark {
 
 // animations
 @import 'animations/transitions';
+
+/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+  font-family: "alimama";
+  font-weight: 700;
+  src: url("../fonts//Alimama_ShuHeiTi_Bold.woff2") format("woff2"),
+  url("../fonts//Alimama_ShuHeiTi_Bold.woff") format("woff"),
+  url("../fonts//Alimama_ShuHeiTi_Bold.ttf") format("truetype");
+  font-display: swap;
+}

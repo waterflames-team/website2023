@@ -14,7 +14,7 @@ const props = defineProps<{
 
 <template>
   <div class="w-full">
-    <p class="font-bold mb-5 text-3xl md:text-5xl">{{ props.title }}</p>
+    <p class="font-bold mb-5 text-3xl ali md:text-5xl">{{ props.title }}</p>
     <slot />
     <div class="flex flex-wrap mt-6 gap-8 md:flex-row">
       <div

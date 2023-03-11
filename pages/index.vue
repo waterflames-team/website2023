@@ -29,7 +29,7 @@ const titlesText = computed<string[]>(() => t('pages.index.title').split('[]'))
           <span
             v-for="(item, i) in titlesText"
             :key="i"
-            class="font-black text-3xl drop-shadow-xl block md:text-4xl xl:text-5xl 2xl:text-7xl"
+            class="font-black text-3xl ali drop-shadow-xl block md:text-4xl xl:text-5xl 2xl:text-7xl"
           >
             <span>{{ item }}</span>
           </span>

@@ -34,3 +34,9 @@ useHead({
     </Body>
   </Html>
 </template>
+
+<!-- <style>
+* {
+  font-family: 'alimama';
+}
+</style> -->

@@ -14,8 +14,8 @@ const props = defineProps<{
       background: props.color,
     }"
   >
-    <div class="text-4xl bold">{{ props.title }}</div>
-    <div class="text-3xl bold">{{ props.content }}</div>
+    <div class="text-4xl bold ali">{{ props.title }}</div>
+    <div class="text-3xl bold ali">{{ props.content }}</div>
     <p class="pt-3">{{ props.footer }}</p>
   </div>
 </template>
