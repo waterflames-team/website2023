@@ -25,37 +25,14 @@ const text = computed(() => {
 
 <template>
   <PageWrapper>
-    <PageBody
-      class="flex px-20 items-center"
-      :style="{
-        backgroundImage: `url('/images/ringrobotx-banner.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        height: '900px',
-        marginTop: '-100px',
-      }"
-    >
-      <PageSection>
-        <div
-          class="flex flex-col font-bold leading-normal text-6xl justify-center"
-        >
-          <p v-for="item of text" :key="item">{{ item }}</p>
-        </div>
-      </PageSection>
-
-      <PageSection>
-        <div
-          class="bg-blue flex flex-col font-bold text-white leading-normal text-4xl"
-        >
-          <p>制作更简洁</p>
-          <p>的游戏产物</p>
-          <p>TerGamer</p>
-          <p>By WaterF</p>
-          <p>terFlames</p>
-        </div>
-      </PageSection>
-    </PageBody>
+    <PageHeader class="flex gap-10 items-center">
+      <PageTitle
+        :text="$t('pages.tergamer.description')"
+        img="/images/ringrobotx-banner.png"
+      >
+        <img src="/images/tergamer-banner.png" class="w-140" />
+      </PageTitle>
+    </PageHeader>
   </PageWrapper>
 </template>
 

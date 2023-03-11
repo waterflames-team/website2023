@@ -57,14 +57,14 @@ const arr = [
 </script>
 
 <template>
-  <PageWrapper class="bg-[#101432] text-white text-xl">
+  <PageWrapper>
     <PageHeader>
       <PageTitle
         :text="$t('pages.ringrobotx.description')"
         :img="'./images/ringrobotx-banner.png'"
       />
     </PageHeader>
-    <PageBody class="flex flex-col py-20 px-5 gap-10 md:px-50 lg:px-100">
+    <PageBody>
       <PageSection>
         <p>RingRobotX 是 WaterFlames 的一大重点项目群，</p>
         <p>
@@ -115,7 +115,7 @@ const arr = [
 
       <PageSection>
         <div
-          class="rounded-xl text-white w-full p-10"
+          class="rounded-xl w-full p-10"
           style="
             background-image: url('./images/ringrobotx-feature.png');
             background-size: cover;
@@ -131,18 +131,18 @@ const arr = [
             <div
               v-for="item in arr"
               :key="item.title"
-              class="bg-black rounded-xl flex flex-col bg-opacity-60 flex-1/2 p-8 w-90 items-center justify-center"
+              class="bg-black rounded-xl flex flex-col bg-opacity-60 flex-1/2 w-full p-8 items-center justify-center xl:w-90"
             >
-              <p class="text-3xl">{{ item.title }}</p>
-              <p class="text-lg">{{ item.content1 }}</p>
-              <p class="text-lg">{{ item.content2 }}</p>
+              <p class="mb-2 text-2xl lg:text-3xl">{{ item.title }}</p>
+              <p class="text-base lg:text-lg">{{ item.content1 }}</p>
+              <p class="text-base lg:text-lg">{{ item.content2 }}</p>
             </div>
           </div>
         </div>
       </PageSection>
       <PageSection>
         <div
-          class="rounded-xl flex w-full py-20 justify-around"
+          class="rounded-xl flex flex-col w-full py-20 px-10 gap-6 justify-center items-center md:flex-row xl:gap-8"
           style="
             background-image: url('./images/ringrobotx-footer.png');
             background-size: cover;
@@ -150,15 +150,13 @@ const arr = [
             background-repeat: no-repeat;
           "
         >
-          <div class="flex flex-col text-white text-3xl gap-6 lg:text-6xl">
-            <p>RingRobotX，</p>
-            <p>马上开耍。</p>
+          <div class="flex flex-col flex-1 text-3xl gap-4 md:gap-6 lg:text-6xl">
+            <p>RingRobotX</p>
+            <p>马上开耍</p>
           </div>
-          <div
-            class="justify-center items-end relative hidden md:flex md:w-3/8"
-          >
+          <div class="max-w-120 relative md:flex">
             <div
-              class="h-auto border-white-300 border-2 rounded-5px shadow ml-4 w-100 z-10"
+              class="h-auto border-white-300 border-2 rounded-5px shadow ml-4 z-10"
             >
               <div
                 class="rounded-t-lg flex space-x-4 bg-gray-200 border-b-2 border-gray-300/75 py-2 px-3 win-header relative dark:bg-slate-800 dark:border-slate-700/75"
@@ -187,7 +185,7 @@ const arr = [
               <div
                 class="rounded-b-lg font-mono bg-gray-200/90 text-sm py-2 px-3 win-body backdrop-filter backdrop-blur-lg dark:bg-slate-800/90"
               >
-                <div>
+                <div class="break-all">
                   $ wget -O install.sh
                   https://gitee.com/waterflames-team/ring-robot-x/raw/master/install.sh
                   && sudo bash install.sh

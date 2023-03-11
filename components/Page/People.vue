@@ -13,10 +13,10 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="text-black w-full pr-60">
-    <p class="font-bold mb-5 text-5xl">{{ props.title }}</p>
+  <div class="w-full">
+    <p class="font-bold mb-5 text-3xl md:text-5xl">{{ props.title }}</p>
     <slot />
-    <div class="flex mt-5 justify-between">
+    <div class="flex flex-wrap mt-6 gap-8 md:flex-row">
       <div
         v-for="item in content"
         :key="item.name"
@@ -26,9 +26,9 @@ const props = defineProps<{
           v-if="item.avatar"
           :src="item.avatar"
           alt=""
-          class="rounded-full h-20 w-20"
+          class="rounded-full h-15 w-15 md:h-20 md:w-20"
         />
-        <div class="flex flex-col text-2xl">
+        <div class="flex flex-col text-xl">
           <p class="font-bold">{{ item.name }}</p>
           <p>{{ item?.desc }}</p>
           <p>{{ item?.note }}</p>

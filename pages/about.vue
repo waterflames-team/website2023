@@ -20,15 +20,15 @@ useHead(() => ({
 </script>
 
 <template>
-  <PageWrapper class="bg-white">
+  <PageWrapper>
     <PageHeader>
       <PageTitle
         :text="$t('pages.about.description')"
         :img="'./images/about-banner.png'"
       />
     </PageHeader>
-    <PageBody class="flex flex-col p-20 gap-10">
-      <PageSection class="text-black text-xl">
+    <PageBody>
+      <PageSection>
         <p>
           水焰团队是一个开源组织，2019 年 8 月创建，主打制作便利生活向的软件。
         </p>
@@ -37,7 +37,7 @@ useHead(() => ({
           我们将每个项目的制作都投入社区，每个项目都是水焰与社区共创的结果。
         </p>
       </PageSection>
-      <PageSection class="text-black text-xl">
+      <PageSection>
         <p>技术因生活而生，技术本就应服务生活。</p>
         <p>用技术便利生活，解决生活问题是我们的最终使命。</p>
         <br />
@@ -120,7 +120,7 @@ useHead(() => ({
 
       <PageSection>
         <div
-          class="rounded-xl flex flex-col text-white w-full p-20 text-6xl gap-6"
+          class="rounded-xl flex flex-col w-full p-10 gap-6 md:p-20"
           style="
             background-image: url('./images/about-footer.png');
             background-size: cover;
@@ -128,11 +128,15 @@ useHead(() => ({
             background-repeat: no-repeat;
           "
         >
-          <p>关于我们的联系方式？</p>
-          <p>这里都可以看到。</p>
+          <div
+            class="flex flex-col flex-1 text-lg gap-2 md:text-4xl md:gap-4 xl:text-6xl"
+          >
+            <p>关于我们的联系方式？</p>
+            <p>这里都可以看到。</p>
+          </div>
           <a
             href="https://www.yuque.com/epeiuss/xykong/contact?singleDoc#"
-            class="text-sm"
+            class="text-sm break-all md:text-base"
           >
             https://www.yuque.com/epeiuss/xykong/contact?singleDoc#</a
           >

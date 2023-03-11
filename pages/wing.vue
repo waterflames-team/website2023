@@ -32,21 +32,23 @@ const arr = ref([
 </script>
 
 <template>
-  <PageWrapper class="bg-white">
+  <PageWrapper>
     <PageHeader>
       <PageTitle
         :text="$t('pages.wing.description')"
         :img="'./images/wing-banner.png'"
       />
     </PageHeader>
-    <PageBody class="flex flex-col p-20 gap-10">
-      <PageSection class="text-black text-xl">
+    <PageBody>
+      <PageSection>
         <p>Wing 是 WaterFlames 的一个博客制作系统，</p>
         <p>你可以通过简单的配置与 markdown 来构建属于自己的博客。</p>
         <p>现在他们都已不再维护：</p>
       </PageSection>
 
-      <PageSection class="flex justify-between">
+      <PageSection
+        class="flex flex-col flex-wrap gap-10 items-center lg:flex-row"
+      >
         <PageCard
           title="wing-kernel"
           content="python生成版"
@@ -56,14 +58,14 @@ const arr = ref([
         <PageCard
           title="wing-lite"
           content="js生成版"
-          color="linear-gradient(61deg, #6485BF 0%, #9AAAC6 99%);"
+          color="linear-gradient(61deg, #6485BF 0%, #9AAAC6 99%)"
           footer="> Gitee > Github"
         ></PageCard>
       </PageSection>
 
       <PageSection>
         <div
-          class="rounded-xl flex flex-col text-white w-full p-20 text-6xl gap-6"
+          class="rounded-xl flex flex-col w-full py-20 px-10 gap-4 justify-center items-center md:flex-row xl:gap-10"
           style="
             background-image: url('./images/ringrobotx-footer.png');
             background-size: cover;
@@ -71,8 +73,10 @@ const arr = ref([
             background-repeat: no-repeat;
           "
         >
-          <p>如果你想的话，</p>
-          <p>你还可以去看看Wing。</p>
+          <div class="flex flex-col flex-1 text-3xl gap-6 lg:text-6xl">
+            <p>如果你想的话</p>
+            <p>你还可以去看看Wing</p>
+          </div>
         </div>
       </PageSection>
     </PageBody>

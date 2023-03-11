@@ -12,50 +12,46 @@ const titlesText = computed<string[]>(() => t('pages.index.title').split('[]'))
 </script>
 
 <template>
-  <PageWrapper class="flex flex-1">
-    <PageBody class="flex flex-1 px-5 items-center lg:px-35">
-      <PageSection
-        class="flex rounded-2xl flex-1 py-40 items-center"
-        :style="{
-          backgroundImage: `url('/images/index-banner.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }"
-      >
-        <div class="flex flex-col flex-1 z-10 md:pl-20 md:w-5/8">
-          <h1
-            class="flex flex-col mt-4 text-white text-center gap-6 md:text-left"
+  <PageWrapper class="flex px-5 justify-center lg:px-35">
+    <PageSection
+      class="flex rounded-2xl flex-1 py-40 items-center"
+      :style="{
+        backgroundImage: `url('/images/index-banner.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }"
+    >
+      <div class="flex flex-col flex-1 z-10 md:pl-20 md:w-5/8">
+        <h1
+          class="flex flex-col mt-4 text-white text-center gap-6 md:text-left"
+        >
+          <span
+            v-for="(item, i) in titlesText"
+            :key="i"
+            class="font-black text-3xl drop-shadow-xl block md:text-4xl xl:text-5xl 2xl:text-7xl"
           >
-            <span
-              v-for="(item, i) in titlesText"
-              :key="i"
-              class="font-black text-3xl drop-shadow-xl block md:text-4xl xl:text-5xl 2xl:text-7xl"
-            >
-              <span>{{ item }}</span>
-            </span>
-          </h1>
-          <div
-            class="flex space-x-4 mt-10 ml-4 justify-center md:justify-start"
-          >
-            <Button
-              size="lg"
-              text="Github"
-              type="opposite"
-              class="font-extrabold"
-              href="https://github.com/orangelckc/water-flames"
-            />
-            <Button
-              size="lg"
-              text="Gitee"
-              type="secondary"
-              class="font-extrabold"
-              href="https://v3.nuxtjs.org"
-            />
-          </div>
+            <span>{{ item }}</span>
+          </span>
+        </h1>
+        <div class="flex space-x-4 mt-10 ml-4 justify-center md:justify-start">
+          <Button
+            size="lg"
+            text="Github"
+            type="opposite"
+            class="font-extrabold"
+            href="https://github.com/orangelckc/water-flames"
+          />
+          <Button
+            size="lg"
+            text="Gitee"
+            type="secondary"
+            class="font-extrabold"
+            href="https://v3.nuxtjs.org"
+          />
         </div>
-      </PageSection>
-    </PageBody>
+      </div>
+    </PageSection>
   </PageWrapper>
 </template>
 

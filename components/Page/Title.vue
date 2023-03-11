@@ -18,19 +18,22 @@ const title = computed(() => {
 </script>
 
 <template>
-  <div class="font-bold leading-normal text-3xl lg:leading-relaxed lg:text-6xl">
-    <slot>
-      <div
-        class="flex flex-col h-200 pl-5 justify-center items-center lg:pl-100 lg:items-start"
-        :style="{
-          backgroundImage: `url(${props.img})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }"
-      >
+  <div
+    class="font-bold flex-1 leading-relaxed text-3xl lg:leading-relaxed lg:text-4xl xl:leading-loose xl:text-6xl"
+  >
+    <div
+      class="flex flex-col h-200 px-10 gap-10 justify-center items-center md:flex-row md:flex-1"
+      :style="{
+        backgroundImage: `url(${props.img})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }"
+    >
+      <div>
         <p v-for="item of title" :key="item">{{ item }}</p>
       </div>
-    </slot>
+      <slot class="bg-red" />
+    </div>
   </div>
 </template>
