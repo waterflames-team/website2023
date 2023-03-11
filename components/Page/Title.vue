@@ -33,7 +33,7 @@ const title = computed(() => {
       <div class="ali">
         <p v-for="item of title" :key="item">{{ item }}</p>
       </div>
-      <slot class="bg-red" />
+      <slot />
     </div>
   </div>
 </template>

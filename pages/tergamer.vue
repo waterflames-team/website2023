@@ -30,7 +30,7 @@ const text = computed(() => {
         :text="$t('pages.tergamer.description')"
         img="/images/ringrobotx-banner.png"
       >
-        <img src="/images/tergamer-banner.png" class="w-140" />
+        <img src="/images/tergamer-banner.png" class="w-120" />
       </PageTitle>
     </PageHeader>
   </PageWrapper>
