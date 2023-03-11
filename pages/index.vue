@@ -13,7 +13,7 @@ const titlesText = computed<string[]>(() => t('pages.index.title').split('[]'))
 
 <template>
   <PageWrapper class="flex flex-1">
-    <PageBody class="flex flex-1 items-center">
+    <PageBody class="flex flex-1 px-5 items-center lg:px-35">
       <PageSection
         class="flex rounded-2xl flex-1 py-40 items-center"
         :style="{

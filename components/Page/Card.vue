@@ -9,7 +9,7 @@ const props = defineProps<{
 
 <template>
   <div
-    class="flex flex-col rounded-2xl text-white py-5 px-10 w-100 gap-2"
+    class="flex flex-col rounded-2xl text-white py-5 px-10 gap-2"
     :style="{
       background: props.color,
     }"

@@ -57,15 +57,15 @@ const arr = [
 </script>
 
 <template>
-  <PageWrapper class="bg-white">
+  <PageWrapper class="bg-[#101432] text-white text-xl">
     <PageHeader>
       <PageTitle
         :text="$t('pages.ringrobotx.description')"
         :img="'./images/ringrobotx-banner.png'"
       />
     </PageHeader>
-    <PageBody class="flex flex-col p-20 gap-10">
-      <PageSection class="text-black text-xl">
+    <PageBody class="flex flex-col py-20 px-5 gap-10 md:px-50 lg:px-100">
+      <PageSection>
         <p>RingRobotX 是 WaterFlames 的一大重点项目群，</p>
         <p>
           我们希望通过这个项目群实现语音对话机器人服务人的场景。 目前 RingRobotX
@@ -73,7 +73,9 @@ const arr = [
         <p>项目群下已公开以下项目：</p>
       </PageSection>
 
-      <PageSection class="flex justify-between">
+      <PageSection
+        class="flex flex-col flex-wrap gap-10 items-center lg:flex-row"
+      >
         <PageCard
           title="RingRobotX"
           content="项目主仓库"
@@ -88,13 +90,15 @@ const arr = [
         ></PageCard>
       </PageSection>
 
-      <PageSection class="text-black text-xl">
+      <PageSection>
         <p>同时，</p>
         <p>我们在对本项目群展开探索之前也进行了一些实验，</p>
         <p>现在他们都已不再维护：</p>
       </PageSection>
 
-      <PageSection class="flex justify-between">
+      <PageSection
+        class="flex flex-col flex-wrap gap-10 items-center lg:flex-row"
+      >
         <PageCard
           title="lk-robot"
           content="主项目前身"
@@ -146,12 +150,12 @@ const arr = [
             background-repeat: no-repeat;
           "
         >
-          <div class="flex flex-col text-white text-6xl gap-6">
+          <div class="flex flex-col text-white text-3xl gap-6 lg:text-6xl">
             <p>RingRobotX，</p>
             <p>马上开耍。</p>
           </div>
           <div
-            class="hidden justify-center items-end relative md:flex md:w-3/8"
+            class="justify-center items-end relative hidden md:flex md:w-3/8"
           >
             <div
               class="h-auto border-white-300 border-2 rounded-5px shadow ml-4 w-100 z-10"
@@ -194,6 +198,5 @@ const arr = [
         </div>
       </PageSection>
     </PageBody>
-    <PageHeader> </PageHeader>
   </PageWrapper>
 </template>

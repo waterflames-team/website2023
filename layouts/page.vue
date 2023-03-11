@@ -8,7 +8,7 @@
       </slot>
       <div class="flex flex-col flex-1 w-full">
         <div
-          class="flex flex-col h-full mx-auto flex-1 w-full max-w-8xl relative"
+          class="flex flex-col h-full mx-auto flex-1 w-full max-w-12xl relative"
         >
           <slot />
         </div>
