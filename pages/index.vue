@@ -52,7 +52,7 @@ const titlesText = (str: string) => {
             text="Github"
             type="opposite"
             class="font-extrabold"
-            href="https://github.com/waterflames/webside"
+            href="https://github.com/waterflames-team/"
           />
         </div>
       </div>
