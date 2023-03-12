@@ -44,7 +44,13 @@ useHead(() => ({
         <p>开放前行是我们的核心精神</p>
         <p>以开放的心态不断前行，拥抱社区，不断进步。</p>
         <br />
-        <a href="#" class="font-bold"> > 阅读文化手册</a>
+        <a
+          href="https://www.yuque.com/epeiuss/xykong/waterflames-civilization?singleDoc# "
+          class="font-bold"
+          target="_blank"
+        >
+          > 阅读文化手册</a
+        >
       </PageSection>
 
       <PageSection class="flex flex-col gap-20">
@@ -52,16 +58,23 @@ useHead(() => ({
           title="主要成员"
           :content="[
             {
-              avatar: './avatars/半糖.webp',
+              avatar: './avatars/王淳彧.jpg',
               name: '王淳彧',
               desc: 'WaterFlames 创始人',
-              note: '> BLOG > Gitee > GitHub',
+              note: {
+                BLOG: 'https://www.yuque.com/epeiuss',
+                Gitee: 'https://gitee.com/epeiusss',
+                GitHub: 'https://github.com/epeiuss',
+              },
             },
             {
-              avatar: './avatars/半糖.webp',
+              avatar: './avatars/折腾调.png',
               name: '折腾调',
               desc: 'WaterFlames 主创人员',
-              note: '> Gitee > GitHub',
+              note: {
+                Gitee: 'https://gitee.com/zhetengtiao',
+                GitHub: 'https://github.com/zhetengtiao',
+              },
             },
           ]"
         ></PagePeople>
@@ -71,11 +84,13 @@ useHead(() => ({
             {
               avatar: './avatars/半糖.webp',
               name: '半糖人类',
-              note: '> Gitee > GitHub',
+              note: {
+                GitHub: 'https://github.com/orangelckc',
+              },
             },
           ]"
         ></PagePeople>
-        <PagePeople
+        <!-- <PagePeople
           title="贡献者"
           :content="[
             {
@@ -99,13 +114,15 @@ useHead(() => ({
               note: '点击查看',
             },
           ]"
-        ></PagePeople>
+        ></PagePeople> -->
         <PagePeople
           title="赞助"
           :content="[
             {
-              avatar: './avatars/半糖.webp',
-              note: '> 爱发电',
+              avatar: './avatars/爱发电.png',
+              note: {
+                爱发电: 'https://afdian.net/a/waterflames',
+              },
             },
           ]"
         >
@@ -137,6 +154,7 @@ useHead(() => ({
           <a
             href="https://www.yuque.com/epeiuss/xykong/contact?singleDoc#"
             class="text-sm break-all md:text-base"
+            target="_blank"
           >
             https://www.yuque.com/epeiuss/xykong/contact?singleDoc#</a
           >

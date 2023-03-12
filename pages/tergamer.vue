@@ -25,17 +25,22 @@ const text = computed(() => {
 
 <template>
   <PageWrapper>
-    <PageHeader class="flex gap-10 items-center">
+    <!-- <PageHeader class="flex gap-10 items-center">
       <PageTitle
         :text="$t('pages.tergamer.description')"
         img="/images/ringrobotx-banner.png"
       >
         <img src="/images/tergamer-banner.png" class="w-120" />
       </PageTitle>
+    </PageHeader> -->
+    <PageHeader class="flex gap-10 relative items-center">
+      <PageTitle
+        :text="$t('pages.tergamer.description')"
+        img="/images/ringrobotx-banner.png"
+        class="flex-1 w-full top-0 absolute"
+      >
+        <img src="/images/tergamer-banner.png" class="w-120" />
+      </PageTitle>
     </PageHeader>
   </PageWrapper>
 </template>
-
-<style lang="scss" scoped>
-//TODO 磨砂效果
-</style>

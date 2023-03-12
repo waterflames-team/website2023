@@ -7,7 +7,7 @@ definePageMeta({
   layout: 'page',
 })
 useHead(() => ({
-  title: capitalize(t('pages.ringrobotx.title')),
+  title: t('pages.ringrobotx.title'),
   meta: [
     {
       name: 'description',
@@ -74,19 +74,27 @@ const arr = [
       </PageSection>
 
       <PageSection
-        class="flex flex-col flex-wrap gap-10 items-center lg:flex-row"
+        class="flex flex-col flex-wrap gap-10 justify-center items-center lg:flex-row"
       >
         <PageCard
           title="RingRobotX"
           content="项目主仓库"
           color="linear-gradient(61deg, #F17146 0%, #FCE3DA 99%)"
-          footer=">文档 > Gitee > Github"
+          :footer="{
+            文档: 'https://docs.waterflames.cn/',
+            Gitee: 'https://gitee.com/waterflames-team/ring-robot-x',
+            Github: 'https://github.com/waterflames-team/ring-robot-x',
+          }"
         ></PageCard>
         <PageCard
           title="Mariner"
           content="技能包管理器"
           color="linear-gradient(61deg, #F17146 0%, #FCE3DA 99%)"
-          footer=">文档 > Gitee > Github"
+          :footer="{
+            文档: 'https://waterflames-team.gitee.io/mariner',
+            Gitee: 'https://gitee.com/waterflames-team/mariner',
+            Github: 'https://github.com/waterflames-team/mariner',
+          }"
         ></PageCard>
       </PageSection>
 
@@ -97,19 +105,25 @@ const arr = [
       </PageSection>
 
       <PageSection
-        class="flex flex-col flex-wrap gap-10 items-center lg:flex-row"
+        class="flex flex-col flex-wrap gap-10 justify-center items-center lg:flex-row"
       >
         <PageCard
           title="lk-robot"
           content="主项目前身"
           color="linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(61deg, #5F92EC 0%, #DFE9FB 99%)"
-          footer=" > Gitee > Github"
+          :footer="{
+            Gitee: 'https://gitee.com/waterflames-team/lingkong-robot',
+            Github: 'https://github.com/waterflames-team/lingkong-robot',
+          }"
         ></PageCard>
         <PageCard
           title="robot-server"
           content="无语言版本"
           color="linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(61deg, #5F92EC 0%, #DFE9FB 99%)"
-          footer=" > Gitee > Github"
+          :footer="{
+            Gitee: 'https://gitee.com/waterflames-team/lingkong-robot-server',
+            Github: 'https://github.com/waterflames-team/lingkong-robot-server',
+          }"
         ></PageCard>
       </PageSection>
 
@@ -131,7 +145,7 @@ const arr = [
             <div
               v-for="item in arr"
               :key="item.title"
-              class="bg-black rounded-xl flex flex-col bg-opacity-60 flex-1/2 w-full p-8 items-center justify-center xl:w-90"
+              class="bg-black rounded-xl flex flex-col bg-opacity-60 flex-1/2 w-full p-8 items-center justify-center 2xl:w-80"
             >
               <p class="mb-2 text-2xl ali lg:text-3xl">{{ item.title }}</p>
               <p class="text-base lg:text-lg">{{ item.content1 }}</p>
@@ -168,9 +182,7 @@ const arr = [
                   <div class="rounded-full bg-green-500 h-3 w-3" />
                   <div class="rounded-full bg-yellow-500 h-3 w-3" />
                 </div>
-                <div class="font-bold flex-1 text-center text-sm pr-12">
-                  BASH
-                </div>
+                <div class="font-bold flex-1 text-left text-sm pr-12"></div>
                 <div class="flex text-sm justify-center items-center">
                   <div class="tooltip">
                     <button

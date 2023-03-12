@@ -6,10 +6,15 @@ const props = defineProps<{
       avatar?: string
       name: string
       desc?: string
-      note: string
+      note: Record<string, any>
     }
   ]
 }>()
+
+const getKeys = (note: Record<string, any>) => {
+  const keys = Object.keys(note) as any[]
+  return keys
+}
 </script>
 
 <template>
@@ -31,7 +36,13 @@ const props = defineProps<{
         <div class="flex flex-col text-xl">
           <p class="font-bold">{{ item.name }}</p>
           <p>{{ item?.desc }}</p>
-          <p>{{ item?.note }}</p>
+          <p>
+            <span v-for="otem in getKeys(item?.note)" :key="otem" class="ali"
+              ><a :href="item?.note[otem]" target="_blank">
+                > {{ otem }} &nbsp;</a
+              ></span
+            >
+          </p>
         </div>
       </div>
     </div>

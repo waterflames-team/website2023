@@ -1,9 +1,9 @@
 ---
 title: '你好, WaterFlames'
 description: 'WaterFlames，一个开放开源的团队，致力于用技术便利生活'
-date: '2023-03-11'
-author: '半糖人类'
-link: 'https://space.bilibili.com/405579368'
+date: '2023-03-12'
+author: 'WaterFlames 团队'
+link: 'https://www.yuque.com/epeiuss'
 ---
 
 :::div{class="flex justify-center gap-4 items-center flex-col md:flex-row mb-6"}

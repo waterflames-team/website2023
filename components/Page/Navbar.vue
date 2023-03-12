@@ -21,13 +21,12 @@ const menus = computed((): IMenuItem[] => [
     text: t('pages.wing.nav'),
     route: { name: 'wing' },
   },
+  { type: 'link', text: t('pages.about.nav'), route: { name: 'about' } },
   {
     type: 'link',
-    text: t('pages.tergamer.nav'),
-    route: { name: 'tergamer' },
+    text: t('pages.post.nav'),
+    href: 'https://www.yuque.com/epeiuss/waterflames-garden',
   },
-  { type: 'link', text: t('pages.about.nav'), route: { name: 'about' } },
-  { type: 'link', text: t('pages.post.nav'), route: { name: 'post' } },
 ])
 </script>
 

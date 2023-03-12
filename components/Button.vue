@@ -79,6 +79,7 @@ const onClick = (event: MouseEvent) => {
     v-else
     :class="`${defaultStyle} ${selectedStyle} ${selectedSize}`"
     :href="href"
+    target="_blank"
     @click="onClick"
   >
     <slot>{{ text }}</slot>

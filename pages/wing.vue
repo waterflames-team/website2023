@@ -35,7 +35,7 @@ const arr = ref([
   <PageWrapper>
     <PageHeader>
       <PageTitle
-        :text="$t('pages.wing.description')"
+        :text="$t('pages.wing.description') + '[][停止维护]'"
         :img="'./images/wing-banner.png'"
       />
     </PageHeader>
@@ -47,19 +47,25 @@ const arr = ref([
       </PageSection>
 
       <PageSection
-        class="flex flex-col flex-wrap gap-10 items-center lg:flex-row"
+        class="flex flex-col flex-wrap gap-10 justify-center items-center lg:flex-row"
       >
         <PageCard
           title="wing-kernel"
           content="python生成版"
           color="linear-gradient(61deg, #6485BF 0%, #9AAAC6 99%)"
-          footer="> Gitee > Github"
+          :footer="{
+            Gitee: 'https://gitee.com/waterflames-team/wing-kernel',
+            Github: 'https://github.com/waterflames-team/wing-kernel',
+          }"
         ></PageCard>
         <PageCard
           title="wing-lite"
           content="js生成版"
           color="linear-gradient(61deg, #6485BF 0%, #9AAAC6 99%)"
-          footer="> Gitee > Github"
+          :footer="{
+            Gitee: 'https://gitee.com/waterflames-team/wing-lite',
+            Github: 'https://github.com/waterflames-team/wing-lite',
+          }"
         ></PageCard>
       </PageSection>
 
@@ -73,7 +79,9 @@ const arr = ref([
             background-repeat: no-repeat;
           "
         >
-          <div class="flex flex-col flex-1 text-3xl gap-6 ali lg:text-6xl">
+          <div
+            class="flex flex-col flex-1 text-3xl gap-6 items-center ali lg:text-6xl"
+          >
             <p>如果你想的话</p>
             <p>你还可以去看看Wing</p>
           </div>

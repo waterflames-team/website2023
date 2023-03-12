@@ -12,7 +12,10 @@ const app = useAppConfig() as AppConfigInput
       <div class="text-center py-4">
         <div class="text-xs text-gray-600 dark:text-gray-400">
           {{ app.name }} ©2019-2023. All rights reserved. <br />Made by
-          <a href="" target="_blank">waterflames/webside</a> with
+          <a href="https://github.com/waterflames-team/website" target="_blank"
+            >waterflames-team/website</a
+          >
+          with
           <span class="text-red-500">❤</span>
         </div>
       </div>

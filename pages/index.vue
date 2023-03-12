@@ -8,11 +8,13 @@ definePageMeta({
 })
 
 // vars
-const titlesText = computed<string[]>(() => t('pages.index.title').split('[]'))
+const titlesText = (str: string) => {
+  return t(str).split('[]')
+}
 </script>
 
 <template>
-  <PageWrapper class="flex px-5 justify-center lg:px-35">
+  <PageWrapper class="flex flex-col flex-1 px-5 gap-5 justify-center lg:px-35">
     <PageSection
       class="flex rounded-2xl flex-1 py-40 items-center"
       :style="{
@@ -27,27 +29,171 @@ const titlesText = computed<string[]>(() => t('pages.index.title').split('[]'))
           class="flex flex-col mt-4 text-white text-center gap-6 md:text-left"
         >
           <span
-            v-for="(item, i) in titlesText"
+            v-for="(item, i) in titlesText('pages.index.title')"
             :key="i"
             class="font-black text-3xl ali drop-shadow-xl block md:text-4xl xl:text-5xl 2xl:text-7xl"
+            :class="{
+              'text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl': i === 0,
+            }"
           >
             <span>{{ item }}</span>
           </span>
         </h1>
-        <div class="flex space-x-4 mt-10 ml-4 justify-center md:justify-start">
+        <div class="flex space-x-4 mt-20 justify-center md:justify-start">
+          <Button
+            size="lg"
+            text="Gitee"
+            type="opposite"
+            class="font-extrabold"
+            href="https://gitee.com/waterflames-team/"
+          />
           <Button
             size="lg"
             text="Github"
             type="opposite"
             class="font-extrabold"
-            href="https://github.com/orangelckc/water-flames"
+            href="https://github.com/waterflames/webside"
           />
+        </div>
+      </div>
+    </PageSection>
+    <PageSection
+      class="flex rounded-2xl flex-1 py-20 items-center"
+      :style="{
+        backgroundImage: `url('/images/ringrobotx-banner.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }"
+    >
+      <div class="flex flex-col flex-1 z-10 md:pl-20 md:w-5/8">
+        <h1
+          class="flex flex-col mt-4 text-white text-center gap-6 md:text-left"
+        >
+          <span
+            v-for="(item, i) in titlesText('pages.ringrobotx.description')"
+            :key="i"
+            class="font-black text-3xl ali drop-shadow-xl block md:text-4xl xl:text-5xl 2xl:text-7xl"
+            :class="{
+              'text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl': i === 0,
+            }"
+          >
+            <span>{{ item }}</span>
+          </span>
+        </h1>
+        <div class="flex mt-20 justify-center md:justify-start">
+          <Button
+            size="lg"
+            text="项目介绍"
+            type="opposite"
+            class="font-extrabold"
+            to="/ringrobotx"
+          />
+        </div>
+      </div>
+    </PageSection>
+    <PageSection
+      class="flex flex-col rounded-2xl flex-1 py-20 gap-10 items-center justify-center md:flex-row md:flex-1"
+      :style="{
+        backgroundImage: `url('/images/ringrobotx-banner.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }"
+    >
+      <div class="flex flex-col flex-1 z-10 md:pl-20 md:w-5/8">
+        <h1
+          class="flex flex-col mt-4 text-white text-center gap-6 md:text-left"
+        >
+          <span
+            v-for="(item, i) in titlesText('TerGamer[]与我们一同开发')"
+            :key="i"
+            class="font-black text-3xl ali drop-shadow-xl block md:text-4xl xl:text-5xl 2xl:text-7xl"
+            :class="{
+              'text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl': i === 0,
+            }"
+          >
+            <span>{{ item }}</span>
+          </span>
+        </h1>
+        <div class="flex mt-20 justify-center md:justify-start">
           <Button
             size="lg"
             text="Gitee"
-            type="secondary"
+            type="opposite"
             class="font-extrabold"
-            href="https://v3.nuxtjs.org"
+            href="https://gitee.com/waterflames-team/ter-gamer"
+          />
+        </div>
+      </div>
+      <img src="/images/tergamer-banner.png" class="w-120" />
+    </PageSection>
+    <PageSection
+      class="flex rounded-2xl flex-1 py-20 items-center"
+      :style="{
+        backgroundImage: `url('/images/wing-banner.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }"
+    >
+      <div class="flex flex-col flex-1 z-10 md:pl-20 md:w-5/8">
+        <h1
+          class="flex flex-col mt-4 text-white text-center gap-6 md:text-left"
+        >
+          <span
+            v-for="(item, i) in titlesText('pages.wing.description')"
+            :key="i"
+            class="font-black text-3xl ali drop-shadow-xl block md:text-4xl xl:text-5xl 2xl:text-7xl"
+            :class="{
+              'text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl': i === 0,
+            }"
+          >
+            <span>{{ item }}</span>
+          </span>
+        </h1>
+        <div class="flex mt-20 justify-center md:justify-start">
+          <Button
+            size="lg"
+            text="项目介绍"
+            type="opposite"
+            class="font-extrabold"
+            to="/wing"
+          />
+        </div>
+      </div>
+    </PageSection>
+    <PageSection
+      class="flex rounded-2xl flex-1 py-20 items-center"
+      :style="{
+        backgroundImage: `url('/images/about-banner.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }"
+    >
+      <div class="flex flex-col flex-1 z-10 md:pl-20 md:w-5/8">
+        <h1
+          class="flex flex-col mt-4 text-white text-center gap-6 md:text-left"
+        >
+          <span
+            v-for="(item, i) in titlesText('pages.about.description')"
+            :key="i"
+            class="font-black text-3xl ali drop-shadow-xl block md:text-4xl xl:text-5xl 2xl:text-7xl"
+            :class="{
+              'text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl': i === 0,
+            }"
+          >
+            <span>{{ item }}</span>
+          </span>
+        </h1>
+        <div class="flex mt-20 justify-center md:justify-start">
+          <Button
+            size="lg"
+            text="项目介绍"
+            type="opposite"
+            class="font-extrabold"
+            to="/about"
           />
         </div>
       </div>
