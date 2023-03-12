@@ -106,7 +106,7 @@ const titlesText = (str: string) => {
           class="flex flex-col mt-4 text-white text-center gap-6 md:text-left"
         >
           <span
-            v-for="(item, i) in titlesText('TerGamer[]与我们一同开发')"
+            v-for="(item, i) in titlesText('pages.tergamer.banner')"
             :key="i"
             class="font-black text-3xl ali drop-shadow-xl block md:text-4xl xl:text-5xl 2xl:text-7xl"
             :class="{

@@ -6,7 +6,7 @@ components:
     change_theme: 切换主题
 pages:
   index:
-    title: "WaterFlames[]一个开放开源的团队[]致力于用技术便利生活"
+    title: "WaterFlames[]一个开放开源的团队[]致力于探索生活命题"
   404:
     title: 找不到该页面
   ringrobotx:
@@ -21,6 +21,7 @@ pages:
     nav: TerGamer
     title: TerGamer
     description: "TerGamer[]一个命令行游戏框架[]它还在开发[]如果你想的话可以和我们一起"
+    banner: "TerGamer[]与我们一同开发"
   post:
     nav: 博客
     title: 博客
@@ -28,7 +29,7 @@ pages:
   about:
     nav: 关于我们
     title: 关于我们
-    description: "WaterFlames[]关于我们"
+    description: "关于我们[]共同探索生活命题"
 banners:
   welcome: 为这个官网加速
 others:

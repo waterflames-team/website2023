@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { capitalize } from '~/utils/str'
 const { t } = useLang()
 
 // compiler macro
@@ -66,65 +65,19 @@ const arr = [
     </PageHeader>
     <PageBody>
       <PageSection>
-        <p>RingRobotX 是 WaterFlames 的一大重点项目群，</p>
         <p>
-          我们希望通过这个项目群实现语音对话机器人服务人的场景。 目前 RingRobotX
+          RingRobotX 是一个采用单轮对话设计的中文模块化语音机器人框架，也是
+          WaterFlames 的一大重点项目群。
         </p>
-        <p>项目群下已公开以下项目：</p>
-      </PageSection>
-
-      <PageSection
-        class="flex flex-col flex-wrap gap-10 justify-center items-center lg:flex-row"
-      >
-        <PageCard
-          title="RingRobotX"
-          content="项目主仓库"
-          color="linear-gradient(61deg, #F17146 0%, #FCE3DA 99%)"
-          :footer="{
-            文档: 'https://docs.waterflames.cn/',
-            Gitee: 'https://gitee.com/waterflames-team/ring-robot-x',
-            Github: 'https://github.com/waterflames-team/ring-robot-x',
-          }"
-        ></PageCard>
-        <PageCard
-          title="Mariner"
-          content="技能包管理器"
-          color="linear-gradient(61deg, #F17146 0%, #FCE3DA 99%)"
-          :footer="{
-            文档: 'https://waterflames-team.gitee.io/mariner',
-            Gitee: 'https://gitee.com/waterflames-team/mariner',
-            Github: 'https://github.com/waterflames-team/mariner',
-          }"
-        ></PageCard>
-      </PageSection>
-
-      <PageSection>
-        <p>同时，</p>
-        <p>我们在对本项目群展开探索之前也进行了一些实验，</p>
-        <p>现在他们都已不再维护：</p>
-      </PageSection>
-
-      <PageSection
-        class="flex flex-col flex-wrap gap-10 justify-center items-center lg:flex-row"
-      >
-        <PageCard
-          title="lk-robot"
-          content="主项目前身"
-          color="linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(61deg, #5F92EC 0%, #DFE9FB 99%)"
-          :footer="{
-            Gitee: 'https://gitee.com/waterflames-team/lingkong-robot',
-            Github: 'https://github.com/waterflames-team/lingkong-robot',
-          }"
-        ></PageCard>
-        <PageCard
-          title="robot-server"
-          content="无语言版本"
-          color="linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(61deg, #5F92EC 0%, #DFE9FB 99%)"
-          :footer="{
-            Gitee: 'https://gitee.com/waterflames-team/lingkong-robot-server',
-            Github: 'https://github.com/waterflames-team/lingkong-robot-server',
-          }"
-        ></PageCard>
+        <p>
+          该项目主体由 WaterFlames团队 使用 Python
+          制作，可用于智能音箱，语言遥控，甚至智能客服、家庭管家、微信机器人等等。
+        </p>
+        <p>
+          我们希望通过这个项目群实现语音对话机器人服务人的场景，同时让中国的
+          Maker
+          们也能够「一小时」搭建属于自己的语音聊天机器人，无需过多以及不必要的配置。
+        </p>
       </PageSection>
 
       <PageSection>
@@ -154,6 +107,89 @@ const arr = [
           </div>
         </div>
       </PageSection>
+
+      <PageSection>
+        <p>
+          目前 RingRobotX
+          项目群的主体项目已经成为了2022年Gitee最有价值开源项目，我们现已对外公开了以下项目：
+        </p>
+      </PageSection>
+
+      <PageSection
+        class="flex flex-col flex-wrap gap-10 justify-center items-center lg:flex-row"
+      >
+        <PageCard
+          title="RingRobotX"
+          content="项目主仓库"
+          color="linear-gradient(61deg, #F17146 0%, #FCE3DA 99%)"
+          :footer="{
+            文档: 'https://docs.waterflames.cn/',
+            Gitee: 'https://gitee.com/waterflames-team/ring-robot-x',
+            Github: 'https://github.com/waterflames-team/ring-robot-x',
+          }"
+        ></PageCard>
+        <PageCard
+          title="Mariner"
+          content="技能包管理器"
+          color="linear-gradient(61deg, #F17146 0%, #FCE3DA 99%)"
+          :footer="{
+            文档: 'https://waterflames-team.gitee.io/mariner',
+            Gitee: 'https://gitee.com/waterflames-team/mariner',
+            Github: 'https://github.com/waterflames-team/mariner',
+          }"
+        ></PageCard>
+      </PageSection>
+
+      <PageSection>
+        <p>并且，</p>
+        <p>我们在对本项目群展开探索之前也进行了一些实验，</p>
+        <p>
+          这些项目是 RingRobotX
+          的前身，现在他们都已不再维护，如果你感兴趣可以去看看：
+        </p>
+      </PageSection>
+
+      <PageSection
+        class="flex flex-col flex-wrap gap-10 justify-center items-center lg:flex-row"
+      >
+        <PageCard
+          title="lk-robot"
+          content="主项目前身"
+          color="linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(61deg, #5F92EC 0%, #DFE9FB 99%)"
+          :footer="{
+            Gitee: 'https://gitee.com/waterflames-team/lingkong-robot',
+            Github: 'https://github.com/waterflames-team/lingkong-robot',
+          }"
+        ></PageCard>
+        <PageCard
+          title="robot-server"
+          content="无语言版本"
+          color="linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(61deg, #5F92EC 0%, #DFE9FB 99%)"
+          :footer="{
+            Gitee: 'https://gitee.com/waterflames-team/lingkong-robot-server',
+            Github: 'https://github.com/waterflames-team/lingkong-robot-server',
+          }"
+        ></PageCard>
+      </PageSection>
+
+      <PageSection>
+        <p>
+          我们会全部开源我们完成制作的部分，并且全部使用 Apache License 2.0
+          开源协议。
+        </p>
+        <p>
+          如果你准备将其闭源并商业使用，那么请确认你知晓 WaterFlames
+          不为任何使用了二次分发软件的 安全性，可用性，完整性 以及其可能带来的
+          其它风险及损失 承担责任。
+        </p>
+        <p>其余或有冲突之处以 Apache License 2.0 开源协议为准。</p>
+      </PageSection>
+      <PageSection>
+        <p>
+          最后，感谢每一位参与的贡献者。我们也欢迎每一位创作者加入本项目的开源贡献中，共创优秀开源社区。
+        </p>
+      </PageSection>
+
       <PageSection>
         <div
           class="rounded-xl flex flex-col w-full py-20 px-10 gap-6 justify-center items-center md:flex-row xl:gap-8"
