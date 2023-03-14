@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { cdnUrl } from '~/utils/cdn'
 const { t } = useLang()
 
 // compiler macro
@@ -60,7 +61,7 @@ const arr = [
     <PageHeader>
       <PageTitle
         :text="$t('pages.ringrobotx.description')"
-        :img="'./images/ringrobotx-banner.png'"
+        :img="cdnUrl('ringrobotx-banner.png')"
       />
     </PageHeader>
     <PageBody>
@@ -83,12 +84,12 @@ const arr = [
       <PageSection>
         <div
           class="rounded-xl w-full p-10"
-          style="
-            background-image: url('./images/ringrobotx-feature.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-          "
+          :style="{
+            backgroundImage: `url(${cdnUrl('ringrobotx-feature.png')})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }"
         >
           <div class="flex flex-col gap-1 items-center">
             <p class="text-4xl ali">特色功能</p>
@@ -193,12 +194,12 @@ const arr = [
       <PageSection>
         <div
           class="rounded-xl flex flex-col w-full py-20 px-10 gap-6 justify-center items-center md:flex-row xl:gap-8"
-          style="
-            background-image: url('./images/ringrobotx-footer.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-          "
+          :style="{
+            backgroundImage: `url(${cdnUrl('ringrobotx-footer.png')})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }"
         >
           <div
             class="flex flex-col flex-1 text-3xl gap-4 ali md:gap-6 lg:text-6xl"

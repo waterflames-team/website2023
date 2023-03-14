@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { capitalize } from '~/utils/str'
+import { cdnUrl } from '~/utils/cdn'
 
 // composable
 const { t } = useLang()
@@ -24,7 +25,7 @@ useHead(() => ({
     <PageHeader>
       <PageTitle
         :text="$t('pages.about.description')"
-        :img="'./images/about-banner.png'"
+        :img="cdnUrl('about-banner.png')"
       />
     </PageHeader>
     <PageBody>
@@ -136,12 +137,12 @@ useHead(() => ({
       <PageSection>
         <div
           class="rounded-xl flex flex-col w-full p-10 gap-6 md:p-20"
-          style="
-            background-image: url('./images/about-footer.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-          "
+          :style="{
+            backgroundImage: `url(${cdnUrl('about-footer.png')})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }"
         >
           <div
             class="flex flex-col flex-1 text-lg gap-2 ali md:text-4xl md:gap-4 xl:text-6xl"

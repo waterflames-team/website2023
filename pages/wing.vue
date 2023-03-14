@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { capitalize } from '~/utils/str'
+import { cdnUrl } from '~/utils/cdn'
 
 // composable
 const { t } = useLang()
@@ -36,7 +37,7 @@ const arr = ref([
     <PageHeader>
       <PageTitle
         :text="$t('pages.wing.description') + '[][停止维护]'"
-        :img="'./images/wing-banner.png'"
+        :img="cdnUrl('wing-banner.png')"
       />
     </PageHeader>
     <PageBody>
@@ -72,12 +73,12 @@ const arr = ref([
       <PageSection>
         <div
           class="rounded-xl flex flex-col w-full py-20 px-10 gap-4 justify-center items-center md:flex-row xl:gap-10"
-          style="
-            background-image: url('./images/ringrobotx-footer.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-          "
+          :style="{
+            backgroundImage: `url(${cdnUrl('ringrobotx-footer.png')})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }"
         >
           <div
             class="flex flex-col flex-1 text-3xl gap-6 items-center ali lg:text-6xl"

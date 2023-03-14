@@ -18,7 +18,7 @@ const titlesText = (str: string) => {
     <PageSection
       class="flex rounded-2xl flex-1 py-40 items-center"
       :style="{
-        backgroundImage: `url('/images/index-banner.png')`,
+        backgroundImage: `url(${cdnUrl('index-banner.png')})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -60,7 +60,7 @@ const titlesText = (str: string) => {
     <PageSection
       class="flex rounded-2xl flex-1 py-20 items-center"
       :style="{
-        backgroundImage: `url('/images/ringrobotx-banner.png')`,
+        backgroundImage: `url(${cdnUrl('ringrobotx-banner.png')})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -95,7 +95,7 @@ const titlesText = (str: string) => {
     <PageSection
       class="flex flex-col rounded-2xl flex-1 py-20 gap-10 items-center justify-center md:flex-row md:flex-1"
       :style="{
-        backgroundImage: `url('/images/ringrobotx-banner.png')`,
+        backgroundImage: `url(${cdnUrl('ringrobotx-banner.png')})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -131,7 +131,7 @@ const titlesText = (str: string) => {
     <PageSection
       class="flex rounded-2xl flex-1 py-20 items-center"
       :style="{
-        backgroundImage: `url('/images/wing-banner.png')`,
+        backgroundImage: `url(${cdnUrl('wing-banner.png')})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -166,7 +166,7 @@ const titlesText = (str: string) => {
     <PageSection
       class="flex rounded-2xl flex-1 py-20 items-center"
       :style="{
-        backgroundImage: `url('/images/about-banner.png')`,
+        backgroundImage: `url(${cdnUrl('about-banner.png')})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
