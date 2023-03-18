@@ -39,7 +39,7 @@ const text = computed(() => {
         img="/images/ringrobotx-banner.png"
         class="flex-1 w-full top-0 absolute"
       >
-        <img src="/images/tergamer-banner.png" class="w-120" />
+        <img :src="cdnUrl('tergamer-banner.png')" class="w-120" />
       </PageTitle>
     </PageHeader>
   </PageWrapper>

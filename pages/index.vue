@@ -126,7 +126,7 @@ const titlesText = (str: string) => {
           />
         </div>
       </div>
-      <img src="/images/tergamer-banner.png" class="w-120" />
+      <img :src="cdnUrl('tergamer-banner.png')" class="w-120" />
     </PageSection>
     <PageSection
       class="flex rounded-2xl flex-1 py-20 items-center"
@@ -190,7 +190,7 @@ const titlesText = (str: string) => {
         <div class="flex mt-20 justify-center md:justify-start">
           <Button
             size="lg"
-            text="项目介绍"
+            text="了解一下"
             type="opposite"
             class="font-extrabold"
             to="/about"

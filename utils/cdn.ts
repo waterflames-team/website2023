@@ -4,3 +4,6 @@ const baseUrl =
 export const cdnUrl = (name: string) => {
   return `${baseUrl}${name}`
 }
+export const avatarUrl = (name: string) => {
+  return `${baseUrl}avatars/${name}`
+}

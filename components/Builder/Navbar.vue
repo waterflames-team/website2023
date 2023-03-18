@@ -89,7 +89,7 @@ const toggleOptions = (show?: boolean) => {
               <span class="flex items-center">
                 <img
                   class="h-10 mr-4 inline-block"
-                  src="~assets/images/logo.svg"
+                  :src="cdnUrl('logo.svg')"
                   alt="LOGO"
                 />
               </span>

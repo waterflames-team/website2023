@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { capitalize } from '~/utils/str'
-import { cdnUrl } from '~/utils/cdn'
+import { cdnUrl, avatarUrl } from '~/utils/cdn'
 
 // composable
 const { t } = useLang()
@@ -57,7 +57,7 @@ useHead(() => ({
           title="主要成员"
           :content="[
             {
-              avatar: './avatars/王淳彧.jpg',
+              avatar: `${avatarUrl('wcy.jpg')}`,
               name: '王淳彧',
               desc: 'WaterFlames 创始人',
               note: {
@@ -67,7 +67,7 @@ useHead(() => ({
               },
             },
             {
-              avatar: './avatars/折腾调.png',
+              avatar: `${avatarUrl('ztt.png')}`,
               name: '折腾调',
               desc: 'WaterFlames 主创人员',
               note: {
@@ -81,7 +81,7 @@ useHead(() => ({
           title="核心贡献者"
           :content="[
             {
-              avatar: './avatars/半糖.webp',
+              avatar: `${avatarUrl('bantang.webp')}`,
               name: '半糖人类',
               note: {
                 GitHub: 'https://github.com/orangelckc',
@@ -118,7 +118,7 @@ useHead(() => ({
           title="赞助"
           :content="[
             {
-              avatar: './avatars/爱发电.png',
+              avatar: `${avatarUrl('afd.png')}`,
               note: {
                 爱发电: 'https://afdian.net/a/waterflames',
               },

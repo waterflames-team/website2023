@@ -15,7 +15,11 @@ useHead({
     {
       hid: 'description',
       name: 'description',
-      content: 'Nuxt 3 Awesome Starter',
+      content: 'WaterFlames, 一个开放开源的团队, 致力于探索生活命题',
+    },
+    {
+      name: 'keywords',
+      content: 'WaterFlames, RingRobotX, Wing, TerGamer, 探索生活命题',
     },
   ],
   link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
