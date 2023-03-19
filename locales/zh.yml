@@ -6,20 +6,20 @@ components:
     change_theme: 切换主题
 pages:
   index:
-    title: "WaterFlames[]一个开放开源的团队[]致力于探索生活命题"
+    title: "WaterFlames[]开源团队[]共同探索生活命题"
   404:
     title: 找不到该页面
   ringrobotx:
     nav: RingRobotX 项目群
-    title: RingRobotX 项目群
+    title: RingRobotX 项目群｜WaterFlames
     description: "RingRobotX[]一个采用单轮对话设计的[]中文模块化语音机器人框架"
   wing:
     nav: Wing 项目群
-    title: Wing 项目群
+    title: Wing 项目群｜WaterFlames
     description: "Wing[]让你用简单的配置[]制作属于自己的博客"
   tergamer:
     nav: TerGamer
-    title: TerGamer
+    title: TerGamer｜WaterFlames
     description: "TerGamer[]一个命令行游戏框架[]它还在开发[]如果你想的话可以和我们一起"
     banner: "TerGamer[]与我们一同开发"
   post:
@@ -28,7 +28,7 @@ pages:
     description: 博客
   about:
     nav: 关于我们
-    title: 关于我们
+    title: 关于我们｜WaterFlames
     description: "关于我们[]共同探索生活命题"
 banners:
   welcome: 为这个官网加速

@@ -13,16 +13,26 @@ useHead({
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     {
-      hid: 'description',
-      name: 'description',
-      content: 'WaterFlames, 一个开放开源的团队, 致力于探索生活命题',
+      name: 'keywords',
+      content:
+        '开源, WaterFlames, RingRobotX, Wing, TerGamer, 探索生活命题, waterflames, ringrobotx, wing, tergamer',
     },
     {
-      name: 'keywords',
-      content: 'WaterFlames, RingRobotX, Wing, TerGamer, 探索生活命题',
+      name: 'description',
+      content:
+        'WaterFlames, 一个开放开源的团队, 致力于探索生活命题|RingRobotX, 一个采用单轮对话设计的, 中文模块化语音机器人框架|Wing, 让你用简单的配置, 制作属于自己的博客|TerGamer, 一个命令行游戏框架[]它还在开发, 如果你想的话可以和我们一起|关于我们, 共同探索生活命题',
     },
   ],
   link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+  script: [
+    // Google Analytics Code
+    {
+      src: 'https://www.googletagmanager.com/gtag/js?id=G-5DPSXPCFB3',
+      async: true,
+    },
+    // Import analitics.js file
+    { src: '/static/js/analytics.js' },
+  ],
 })
 </script>
 

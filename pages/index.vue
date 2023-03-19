@@ -7,6 +7,16 @@ definePageMeta({
   layout: 'page',
 })
 
+useHead({
+  title: 'WaterFlames｜共同探索生活命题',
+  meta: [
+    {
+      name: 'description',
+      content: 'WaterFlames, 一个开放开源的团队, 致力于探索生活命题',
+    },
+  ],
+})
+
 // vars
 const titlesText = (str: string) => {
   return t(str).split('[]')
@@ -53,6 +63,13 @@ const titlesText = (str: string) => {
             type="opposite"
             class="font-extrabold"
             href="https://github.com/waterflames-team/"
+          />
+          <Button
+            size="lg"
+            text="了解我们"
+            type="opposite"
+            class="font-extrabold"
+            to="/about"
           />
         </div>
       </div>
@@ -126,7 +143,11 @@ const titlesText = (str: string) => {
           />
         </div>
       </div>
-      <img :src="cdnUrl('tergamer-banner.png')" class="w-120" />
+      <img
+        :src="cdnUrl('tergamer-banner.png')"
+        class="w-120"
+        alt="tergamer-banner"
+      />
     </PageSection>
     <PageSection
       class="flex rounded-2xl flex-1 py-20 items-center"
@@ -159,41 +180,6 @@ const titlesText = (str: string) => {
             type="opposite"
             class="font-extrabold"
             to="/wing"
-          />
-        </div>
-      </div>
-    </PageSection>
-    <PageSection
-      class="flex rounded-2xl flex-1 py-20 items-center"
-      :style="{
-        backgroundImage: `url(${cdnUrl('about-banner.png')})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }"
-    >
-      <div class="flex flex-col flex-1 z-10 md:pl-20 md:w-5/8">
-        <h1
-          class="flex flex-col mt-4 text-white text-center gap-6 md:text-left"
-        >
-          <span
-            v-for="(item, i) in titlesText('pages.about.description')"
-            :key="i"
-            class="font-black text-3xl ali drop-shadow-xl block md:text-4xl xl:text-5xl 2xl:text-7xl"
-            :class="{
-              'text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl': i === 0,
-            }"
-          >
-            <span>{{ item }}</span>
-          </span>
-        </h1>
-        <div class="flex mt-20 justify-center md:justify-start">
-          <Button
-            size="lg"
-            text="了解一下"
-            type="opposite"
-            class="font-extrabold"
-            to="/about"
           />
         </div>
       </div>

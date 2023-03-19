@@ -30,7 +30,7 @@ const getKeys = (note: Record<string, any>) => {
         <img
           v-if="item.avatar"
           :src="item.avatar"
-          alt=""
+          alt="LOGO"
           class="rounded-full h-15 w-15 md:h-20 md:w-20"
         />
         <div class="flex flex-col text-xl">
