@@ -41,6 +41,8 @@ export default defineNuxtConfig({
     ],
   ],
 
+  // No sourcemap required in output
+  sourcemap: false,
   // vite plugins
   vite: {
     plugins: [
