@@ -56,6 +56,7 @@
     "sass": "1.59.3",
     "sass-loader": "^13.2.1",
     "serve": "^14.2.0",
+    "sitemap": "^7.1.1",
     "three": "^0.150.1",
     "translate": "^1.4.1",
     "typescript": "^5.0.2",

@@ -95,7 +95,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: ['/ringrobotx', '/wing', '/about'],
+      routes: ['/ringrobotx', '/wing', '/about', '/sitemap.xml'],
     },
   },
   // content
