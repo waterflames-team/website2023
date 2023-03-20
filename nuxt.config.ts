@@ -9,7 +9,8 @@ export default defineNuxtConfig({
   // typescripts
   typescript: {
     strict: true,
-    typeCheck: true,
+    shim: false, // https://nuxt.com.cn/docs/getting-started/installation
+    // typeCheck: true,
   },
 
   // css
@@ -25,21 +26,20 @@ export default defineNuxtConfig({
 
   // modules
   modules: [
-    'unplugin-icons/nuxt',
     '@intlify/nuxt3',
     '@pinia/nuxt',
     '@nuxt/content',
     '@vueuse/nuxt',
     'nuxt-windicss',
+    '@nuxtjs/critters',
+    '@nuxtjs/fontaine',
+    [
+      'unplugin-icons/nuxt',
+      {
+        autoInstall: true,
+      },
+    ],
   ],
-
-  // experimental features
-  experimental: {
-    reactivityTransform: false,
-  },
-
-  // auto import components
-  components: true,
 
   // vite plugins
   vite: {
@@ -78,19 +78,24 @@ export default defineNuxtConfig({
   },
 
   // windicss
-  windicss: {
-    analyze: {
-      analysis: {
-        interpretUtilities: false,
-      },
-      server: {
-        port: 4000,
-        open: false,
-      },
-    },
-    scan: true,
-  },
+  // windicss: {
+  //   analyze: {
+  //     analysis: {
+  //       interpretUtilities: false,
+  //     },
+  //     server: {
+  //       port: 4000,
+  //       open: false,
+  //     },
+  //   },
+  //   scan: true,
+  // },
 
+  nitro: {
+    prerender: {
+      routes: ['/ringrobotx', '/wing', '/about'],
+    },
+  },
   // content
   content: {
     documentDriven: true,
