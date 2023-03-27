@@ -193,7 +193,7 @@ const arr = [
 
       <PageSection>
         <div
-          class="rounded-xl flex flex-col w-full py-20 px-10 gap-6 justify-center items-center md:flex-row xl:gap-8"
+          class="rounded-xl flex flex-col w-full py-20 px-5 gap-6 justify-center items-center lg:flex-row xl:gap-8"
           :style="{
             backgroundImage: `url(${cdnUrl('ringrobotx-footer.png')})`,
             backgroundSize: 'cover',
@@ -234,7 +234,7 @@ const arr = [
                 </div>
               </div>
               <div
-                class="rounded-b-lg font-mono bg-gray-200/90 text-sm py-2 px-3 win-body backdrop-filter backdrop-blur-lg dark:bg-slate-800/90"
+                class="rounded-b-lg font-mono bg-gray-200/90 text-xs lg:text-sm py-2 px-3 win-body backdrop-filter backdrop-blur-lg dark:bg-slate-800/90"
               >
                 <div class="break-all">
                   $ wget -O install.sh

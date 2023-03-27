@@ -64,13 +64,6 @@ const titlesText = (str: string) => {
             class="font-extrabold"
             href="https://github.com/waterflames-team/"
           />
-          <Button
-            size="lg"
-            text="了解我们"
-            type="opposite"
-            class="font-extrabold"
-            to="/about"
-          />
         </div>
       </div>
     </PageSection>
