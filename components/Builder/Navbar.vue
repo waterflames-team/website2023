@@ -84,6 +84,7 @@ const toggleOptions = (show?: boolean) => {
               tag="a"
               class="flex-none font-bold mr-3 text-md text-gray-900 w-50 overflow-hidden dark:text-gray-200"
               :to="{ name: 'index' }"
+              prefetch
             >
               <span class="sr-only">home</span>
               <span class="flex items-center">

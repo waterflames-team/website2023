@@ -72,6 +72,7 @@ const onClick = (event: MouseEvent) => {
     tag="a"
     :to="to"
     :class="`${defaultStyle} ${selectedStyle} ${selectedSize}`"
+    prefetch
   >
     <slot>{{ text }}</slot>
   </NuxtLink>
